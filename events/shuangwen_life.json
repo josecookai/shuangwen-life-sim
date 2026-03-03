@@ -1,0 +1,162 @@
+[
+  {
+    "chain_id": "CHAIN_06",
+    "chain_name": "社交软件病毒传播",
+    "route_tags": ["社交","创业"],
+    "boom_metrics": [
+      {"k": "cac_usd", "v": 0.03},
+      {"k": "dau", "v": 180000000},
+      {"k": "valuation_usd", "v": 120000000000}
+    ],
+    "headlines": {
+      "headline_success": "{CITY} — {COMPANY} hits 180M DAU with $0.03 CAC, closes $12B Series E at $120B valuation, surpassing Twitter in Asia",
+      "headline_failure": "{CITY} — {COMPANY} collapses after data breach exposes 180M users; $12B valuation wiped, CEO arrested, app delisted"
+    },
+    "beats": [
+      {
+        "beat_id": "B1",
+        "beat_type": "前置",
+        "text": "你在字节跳动做了3年产品经理，每天优化D+7留存率0.5%。凌晨2点，你在飞书文档写下：'做一个不用注册就能用的社交app'。"
+      },
+      {
+        "beat_id": "B2",
+        "beat_type": "触发",
+        "text": "你辞职拿N+2赔偿，在望京租了间隔断房，用Flutter写了第一个demo。上传TestFlight第7天，产品被某大V转发，DAU破10万。"
+      },
+      {
+        "beat_id": "B3",
+        "beat_type": "爆发",
+        "text": "红杉递出TS：投前估值$120亿，条件是你要接受'病毒式增长顾问'。同月，你的app在印尼单日新增破2000万，服务器崩了4次。"
+      },
+      {
+        "beat_id": "B4",
+        "beat_type": "分支选择",
+        "text": "第89天，印度政府以'数据安全'为由要求你本地化存储用户数据，否则下架。成本增加$800M/年，董事会逼你48小时内决定：",
+        "choice_point": true,
+        "choices": [
+          {
+            "choice_text": "拒绝印度市场，专注欧美和东南亚",
+            "immediate_effects": "-Money 200, -Reputation 15, +Health 10, set global_focus=True",
+            "next_beat": "B5A",
+            "stakes": "赌欧美市场能撑起估值"
+          },
+          {
+            "choice_text": "接受条件，在印度建数据中心",
+            "immediate_effects": "-Money 800, +Reputation 30, -Health 20, set india_locked=True",
+            "next_beat": "B5B",
+            "stakes": "赌印度市场能带来10亿用户"
+          },
+          {
+            "choice_text": "暗中绕过监管，用新加坡服务器中转",
+            "immediate_effects": "+Money 100, +Reputation 10, -Health 30, set regulatory_risk=True",
+            "next_beat": "B5C",
+            "stakes": "赌不会被发现"
+          }
+        ]
+      },
+      {
+        "beat_id": "B5A",
+        "beat_type": "余震",
+        "text": "退出印度导致DAU增速放缓，但欧美用户ARPU是印度用户的15倍。你靠广告收入实现盈利，股价稳在$89。"
+      },
+      {
+        "beat_id": "B5B",
+        "beat_type": "余震",
+        "text": "印度数据中心第2年就满负荷，你又花了$400M扩容。但印度政府开始要求内容审查，你雇了3000名审核员。"
+      },
+      {
+        "beat_id": "B5C",
+        "beat_type": "反噬",
+        "text": "第147天，印度情报局追踪到流量异常，直接封禁你的app。你的'绕过方案'被曝光，全球媒体头条：'中国app间谍疑云'。"
+      },
+      {
+        "beat_id": "B6",
+        "beat_type": "收束",
+        "text": "无论哪条路，你曾拥有$120亿估值和1.8亿日活。爽文的核心是：你证明了一个人可以改变10亿人的社交方式。",
+        "long_term_status": ["billionaire_paper","regulatory_expert","burnout"]
+      }
+    ],
+    "long_term_status": ["billionaire_paper","regulatory_expert","burnout","blacklisted"],
+    "screenshot_hook": "Bloomberg头条对比：'$120B valuation with $0.03 CAC' vs '180M users exposed, CEO arrested'"
+  },
+  {
+    "chain_id": "CHAIN_08",
+    "chain_name": "军旅无人机战争",
+    "route_tags": ["军人"],
+    "boom_metrics": [
+      {"k": "confirmed_kills", "v": 47},
+      {"k": "compensation_usd", "v": 240000000},
+      {"k": "drone_sorties", "v": 890}
+    ],
+    "headlines": {
+      "headline_success": "{REGION} — Drone ace {COMPANY} logs 47 confirmed kills in 890 sorties; $240M compensation fund established for civilian cases, Pentagon cites 'unprecedented precision'",
+      "headline_failure": "{REGION} — Friendly fire incident by {COMPANY} kills 12 coalition troops; $240M lawsuit filed, 47-kill ace grounded pending war crimes probe"
+    },
+    "beats": [
+      {
+        "beat_id": "B1",
+        "beat_type": "前置",
+        "text": "你在西电学电子信息工程，2018年入伍被分到无人机大队。第一次实弹演习，你用彩虹-4在3000米高空命中移动靶，首长当场记下你的名字。"
+      },
+      {
+        "beat_id": "B2",
+        "beat_type": "触发",
+        "text": "2024年边境冲突，你操控翼龙-3连续47小时作战，确认击毁敌方装甲车23辆、火炮阵地8处。战报传回北京，你被授予一等功。"
+      },
+      {
+        "beat_id": "B3",
+        "beat_type": "爆发",
+        "text": "第47次出击，你发现疑似平民车队混入战场。指挥部命令'授权打击'，你的红外成像显示车里有儿童热源信号。"
+      },
+      {
+        "beat_id": "B4",
+        "beat_type": "分支选择",
+        "text": "倒计时90秒，你必须决定：",
+        "choice_point": true,
+        "choices": [
+          {
+            "choice_text": "执行命令，发射导弹",
+            "immediate_effects": "+Reputation 50, -Health 40, +Money 30, set combat_hero=True, set ptsd=True",
+            "next_beat": "B5A",
+            "stakes": "赌车里没有平民"
+          },
+          {
+            "choice_text": "拒绝执行，报告'目标识别不清'",
+            "immediate_effects": "-Reputation 30, +Health 20, +Money 0, set court_martial_risk=True",
+            "next_beat": "B5B",
+            "stakes": "赌军事法庭会理解你"
+          },
+          {
+            "choice_text": "请求低空侦察确认，延迟打击",
+            "immediate_effects": "+Reputation 20, -Health 10, -Money 10, set target_escaped=True",
+            "next_beat": "B5C",
+            "stakes": "赌敌人不会趁侦察时逃跑"
+          }
+        ]
+      },
+      {
+        "beat_id": "B5A",
+        "beat_type": "反噬",
+        "text": "导弹命中后，情报确认车队里有联合国观察员。国际刑事法院启动调查，你的47次击杀记录成为'战争罪行证据'。"
+      },
+      {
+        "beat_id": "B5B",
+        "beat_type": "余震",
+        "text": "军事法庭辩论了3天，最终裁定你'临阵犹豫'，降职处理。但同僚私下给你敬酒：'你是唯一敢说不的人'。"
+      },
+      {
+        "beat_id": "B5C",
+        "beat_type": "余震",
+        "text": "侦察无人机拍到车队确实装载了军火，但敌人在你侦察时呼叫了防空火力。你的僚机被击落，飞行员牺牲。"
+      },
+      {
+        "beat_id": "B6",
+        "beat_type": "收束",
+        "text": "战后，你的照片挂在国防大学走廊，标签是'47次击杀的无人机王牌'。只有你知道，第47次按下发射键时，你的手抖了。",
+        "long_term_status": ["ptsd", "war_hero", "discharged"]
+      }
+    ],
+    "long_term_status": ["ptsd", "war_hero", "discharged", "wanted"],
+    "screenshot_hook": "无人机王牌47击杀 vs 战争罪行调查的Bloomberg头条对比"
+  }
+]
