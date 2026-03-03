@@ -1,0 +1,929 @@
+[
+  {
+    "id": "CHAIN_05",
+    "title": "NFT蓝筹归零",
+    "category": "finance",
+    "headlines": [
+      "{COMPANY}发行的蓝筹NFT地板价突破45万美元，创历史纪录",
+      "NFT市场崩盘，{CITY}项目{COMPANY}地板价跌至12美元，跌幅99.9%"
+    ],
+    "boom_metrics": {
+      "peak_floor_price_usd": 450000,
+      "current_floor_price_usd": 12,
+      "total_volume_eth": 850000,
+      "unique_holders": 4500,
+      "market_cap_peak_usd": 2025000000
+    },
+    "beats": [
+      {
+        "beat_id": 1,
+        "title": "蓝筹崛起",
+        "text": "你的NFT项目在OpenSea上线3个月后，地板价从0.08 ETH飙升至150 ETH（约45万美元）。名流开始在推特上晒他们的持有，Discord社区突破50万人。一家顶级风险投资基金主动联系你，估值10亿美元想要投资。",
+        "choices": [
+          {
+            "text": "接受VC投资，扩张团队",
+            "effects": ["+Money 5000", "-Equity 15", "+Reputation 25", "set vc_backed=true"],
+            "next_beat": 2
+          },
+          {
+            "text": "保持独立，专注社区建设",
+            "effects": ["+Community_Loyalty 30", "+Reputation 15", "set community_first=true"],
+            "next_beat": 3
+          },
+          {
+            "text": "推出代币，进一步金融化",
+            "effects": ["+Money 20000", "+Risk 50", "set token_launched=true"],
+            "next_beat": 4
+          }
+        ]
+      },
+      {
+        "beat_id": 2,
+        "title": "VC的压力",
+        "text": "VC投资后，压力随之而来。他们要求你'加快路线图'，'提高用户增长'，'考虑IPO路径'。社区开始抱怨项目变得'太公司化'，失去了最初的街头文化 vibe。一些早期持有者开始抛售。",
+        "choices": [
+          {
+            "text": "迎合VC，加速商业化",
+            "effects": ["+Money 3000", "-Community_Loyalty 25", "+Revenue 2000", "set commercial_focus=true"],
+            "next_beat": 5
+          },
+          {
+            "text": "平衡两者，推出社区治理",
+            "effects": ["+Community_Loyalty 15", "-VC_Satisfaction 10", "set dao_transition=true"],
+            "next_beat": 6
+          }
+        ]
+      },
+      {
+        "beat_id": 3,
+        "title": "熊市来袭",
+        "text": "ETH价格暴跌70%，NFT市场整体流动性枯竭。你的地板价虽然还维持在高位，但日交易量从5000 ETH骤降至50 ETH。社区的FUD（恐惧、不确定、怀疑）情绪蔓延，有人开始质疑项目的长期价值。",
+        "choices": [
+          {
+            "text": "启动回购计划，稳定价格",
+            "effects": ["-Money 4000", "+Floor_Price 20", "+Community_Confidence 15", "set buyback_program=true"],
+            "next_beat": 7
+          },
+          {
+            "text": "专注开发，忽视价格波动",
+            "effects": ["-Money 1000", "+Tech 20", "-Floor_Price 30", "set build_focus=true"],
+            "next_beat": 8
+          },
+          {
+            "text": "宣布新项目，吸引注意力",
+            "effects": ["+Attention 20", "-Reputation 10", "set distraction_launch=true"],
+            "next_beat": 9
+          }
+        ]
+      },
+      {
+        "beat_id": 5,
+        "title": "过度商业化反噬",
+        "text": "你的商业化策略带来了短期收入，但也彻底改变了社区文化。原本的'持有者特权'变成了'付费墙'，早期支持者感到被背叛。一位知名KOL发布长文《从革命到收割：一个NFT项目的堕落》，获得数万转发。",
+        "choices": [
+          {
+            "text": "发布公开信，回归初心",
+            "effects": ["+Reputation 15", "-Revenue 1000", "set back_to_roots=true"],
+            "next_beat": 10
+          },
+          {
+            "text": "继续现有策略，不理会批评",
+            "effects": ["+Revenue 2000", "-Community_Loyalty 40", "-Reputation 25", "set profit_max=true"],
+            "next_beat": 11
+          }
+        ]
+      },
+      {
+        "beat_id": 7,
+        "title": "回购陷阱",
+        "text": "回购计划初期有效，但市场下跌太快。你的资金储备从1亿美元迅速消耗至3000万，但地板价仍在下跌。更糟糕的是，一些'纸手'（短期持有者）利用回购机会套现离场，留下'钻石手'（长期持有者）在高位套牢。",
+        "choices": [
+          {
+            "text": "停止回购，保存现金",
+            "effects": ["-Community_Confidence 20", "+Cash 20", "-Floor_Price 40", "set stop_buyback=true"],
+            "next_beat": 12
+          },
+          {
+            "text": "all-in回购，赌市场反转",
+            "effects": ["-Money 3000", "+Floor_Price 10", "+Risk 60", "set all_in_buyback=true"],
+            "next_beat": 13
+          }
+        ]
+      },
+      {
+        "beat_id": 12,
+        "title": "流动性死亡螺旋",
+        "text": "停止回购的决定被视为'放弃项目'，恐慌性抛售开始。地板价在一周内从80 ETH跌至5 ETH，随后跌至1 ETH以下。曾经价值45万美元的JPEG现在只值12美元。你的Discord从50万人缩减至5000人，大部分频道陷入死寂。",
+        "choices": [
+          {
+            "text": "宣布项目进入'维护模式'",
+            "effects": ["-Reputation 30", "+Integrity 10", "set maintenance_mode=true"],
+            "next_beat": 14
+          },
+          {
+            "text": "尝试新项目，重新出发",
+            "effects": ["+Attention 15", "-Reputation 20", "set phoenix_project=true"],
+            "next_beat": 15
+          }
+        ]
+      }
+    ],
+    "long_term_status": {
+      "maintenance_mode": "诚实面对失败，保留最后一点尊严",
+      "phoenix_project": "新项目成功，但老持有者无法受益",
+      "back_to_roots": "回归社区赢得原谅，缓慢恢复",
+      "profit_max": "短期盈利但声誉尽毁",
+      "cautionary_tale": "成为NFT泡沫的经典案例"
+    },
+    "screenshot_hook": {
+      "trigger": "地板价突破/崩盘",
+      "caption": "{COMPANY}NFT从45万美元地板价跌至12美元，跌幅99.9%",
+      "visual": "OpenSea价格走势图，社区讨论截图"
+    }
+  },
+  {
+    "id": "CHAIN_11",
+    "title": "P2P债务破产",
+    "category": "finance",
+    "headlines": [
+      "{COMPANY}累计撮合借贷180亿美元，用户突破240万",
+      "{CITY}P2P平台{COMPANY}爆雷，180亿待收，240万用户血本无归"
+    ],
+    "boom_metrics": {
+      "outstanding_loans_usd": 18000000000,
+      "user_count_millions": 2.4,
+      "default_rate_pct": 28.5,
+      "run_on_deposits_usd": 8000000000,
+      "executive_flee_count": 3
+    },
+    "beats": [
+      {
+        "beat_id": 1,
+        "title": "野蛮生长期",
+        "text": "你的P2P平台成立3年，累计撮合借贷180亿美元，注册用户240万。年化收益率承诺12-18%，远高于银行定期。资金如潮水般涌入，你每天都在考虑如何部署这些资金。风控部门警告逾期率在上升，但业务团队的压力是'先规模后风控'。",
+        "choices": [
+          {
+            "text": "加强风控，降低收益率",
+            "effects": ["-Growth_Rate 30", "+Default_Rate_Control 20", "+Integrity 15", "set risk_focus=true"],
+            "next_beat": 2
+          },
+          {
+            "text": "维持高收益率，冲规模",
+            "effects": ["+Growth_Rate 40", "+Risk 50", "set growth_first=true"],
+            "next_beat": 3
+          },
+          {
+            "text": "寻求银行存管，合规化",
+            "effects": ["-Money 1000", "+Regulatory_Compliance 30", "+Reputation 20", "set compliance_path=true"],
+            "next_beat": 4
+          }
+        ]
+      },
+      {
+        "beat_id": 2,
+        "title": "合规阵痛",
+        "text": "降低收益率后，用户增长放缓，资金流入减少。竞争对手趁势推出更高收益产品抢夺市场。董事会质疑你的保守策略，认为你在'浪费窗口期'。同时，监管部门开始收紧P2P政策，要求备案登记。",
+        "choices": [
+          {
+            "text": "坚持合规，申请备案",
+            "effects": ["-Money 500", "+Regulatory_Compliance 25", "set备案_applied=true"],
+            "next_beat": 5
+          },
+          {
+            "text": "转型助贷，规避P2P监管",
+            "effects": ["+Business 20", "-Reputation 10", "set转型=true"],
+            "next_beat": 6
+          }
+        ]
+      },
+      {
+        "beat_id": 3,
+        "title": "暴雷前夜",
+        "text": "持续的高收益率策略终于反噬。底层资产逾期率突破25%，资金池开始紧张。你需要用新投资者的钱来偿还老投资者——典型的庞氏结构。财务总监私下告诉你：按照当前速度，资金只能支撑60天。",
+        "choices": [
+          {
+            "text": "主动清盘，有序退出",
+            "effects": ["-Reputation 40", "+Integrity 30", "set orderly_exit=true"],
+            "next_beat": 7
+          },
+          {
+            "text": "继续借新还旧，争取时间",
+            "effects": ["+Stress 60", "-Integrity 40", "set Ponzi_continues=true"],
+            "next_beat": 8
+          },
+          {
+            "text": "转移资产，准备跑路",
+            "effects": ["+Money 5000", "-Integrity 100", "set flee_prep=true"],
+            "next_beat": 9
+          }
+        ]
+      },
+      {
+        "beat_id": 4,
+        "title": "银行存管上线",
+        "text": "银行存管系统终于上线，资金流转更加透明。但这也暴露了一个问题：你的资金池模式（而非撮合模式）在存管体系下难以持续。你需要彻底转型，但这意味着短期收入和利润的断崖式下跌。",
+        "choices": [
+          {
+            "text": "彻底转型纯撮合模式",
+            "effects": ["-Revenue 60", "+Integrity 25", "+Regulatory_Compliance 30", "set pure_matchmaking=true"],
+            "next_beat": 10
+          },
+          {
+            "text": "寻找监管灰色地带",
+            "effects": ["+Revenue 20", "-Regulatory_Compliance 20", "+Risk 40", "set gray_zone=true"],
+            "next_beat": 11
+          }
+        ]
+      },
+      {
+        "beat_id": 7,
+        "title": "挤兑开始",
+        "text": "你宣布清盘的消息引发了挤兑。投资者争先恐后地申请提现，单日申请额超过20亿。你的现金流瞬间枯竭，无法兑付。用户聚集在{CITY}总部楼下，有人拉横幅，有人哭喊。警方已经介入维持秩序。",
+        "choices": [
+          {
+            "text": "配合调查，承诺尽最大努力偿还",
+            "effects": ["-Reputation 50", "+Integrity 20", "-Money 2000", "set cooperate=true"],
+            "next_beat": 12
+          },
+          {
+            "text": "配合调查，承诺尽最大努力偿还",
+            "effects": ["-Reputation 50", "+Integrity 20", "-Money 2000", "set cooperate=true"],
+            "next_beat": 12
+          }
+        ]
+      },
+      {
+        "beat_id": 8,
+        "title": "最后一搏",
+        "text": "你决定最后一搏，推出一个'高息新产品'吸引资金。广告铺天盖地，承诺20%年化。短期内确实吸引了一些资金，但明智的投资者已经开始撤离。一位财经博主发布了深度调查文章，质疑你的商业模式。",
+        "choices": [
+          {
+            "text": "起诉博主诽谤，压制负面",
+            "effects": ["-Money 300", "-Reputation 15", "set censorship=true"],
+            "next_beat": 13
+          },
+          {
+            "text": "承认困难，寻求债务重组",
+            "effects": ["-Reputation 35", "+Integrity 25", "set debt_restructuring=true"],
+            "next_beat": 14
+          }
+        ]
+      },
+      {
+        "beat_id": 12,
+        "title": "司法程序",
+        "text": "警方正式立案调查，你的账户被冻结。检方指控你涉嫌非法吸收公众存款。180亿待收资金，涉及240万用户，这是{CITY}历史上最大的金融案件之一。你的律师建议你考虑认罪协商，但量刑可能仍在10年以上。",
+        "choices": [
+          {
+            "text": "认罪，争取从轻",
+            "effects": ["-Freedom 10 years", "+Integrity 10", "set guilty_plea=true"],
+            "next_beat": 15
+          },
+          {
+            "text": "不认罪，坚持到底",
+            "effects": ["-Freedom ?, integrity gamble", "set not_guilty=true"],
+            "next_beat": 16
+          }
+        ]
+      }
+    ],
+    "long_term_status": {
+      "guilty_plea": "认罪服刑，出狱后东山再起",
+      "not_guilty": "长期诉讼，身败名裂",
+      "orderly_exit": "虽然失败但保留了部分尊严",
+      "debt_restructuring": "艰难重组，部分偿还用户",
+      "cautionary_tale": "成为互联网金融监管转折点"
+    },
+    "screenshot_hook": {
+      "trigger": "用户挤兑/警方立案",
+      "caption": "{COMPANY}爆雷：180亿待收，240万用户维权",
+      "visual": "用户聚集总部，警方维持秩序"
+    }
+  },
+  {
+    "id": "CHAIN_18",
+    "title": "元宇宙地产泡沫",
+    "category": "finance",
+    "headlines": [
+      "{COMPANY}虚拟地块拍出430万美元天价，2300名用户抢购",
+      "元宇宙退烧，{CITY}项目{COMPANY}虚拟地块跌幅99%，无人问津"
+    ],
+    "boom_metrics": {
+      "peak_land_price_usd": 4300000,
+      "active_users": 2300,
+      "total_land_parcels": 90000,
+      "current_avg_price_usd": 120,
+      "daily_active_users_now": 45
+    },
+    "beats": [
+      {
+        "beat_id": 1,
+        "title": "虚拟地产热",
+        "text": "Decentraland的一块地卖了240万美元的新闻让整个行业疯狂。你趁热推出了自己的元宇宙地产项目，主打'企业元宇宙总部'概念。2300名用户涌入，最贵的一块地拍出430万美元。你的代币价格一周内涨了10倍。",
+        "choices": [
+          {
+            "text": "快速套现，出售部分代币",
+            "effects": ["+Money 8000", "-Token_Price 15", "+Cash 40", "set partial_exit=true"],
+            "next_beat": 2
+          },
+          {
+            "text": "全力建设，开发虚拟空间",
+            "effects": ["-Money 3000", "+Platform_Quality 30", "set build_focus=true"],
+            "next_beat": 3
+          },
+          {
+            "text": "炒作热度，推出更多地块",
+            "effects": ["+Money 5000", "+Hype 40", "+Risk 30", "set land_sale=true"],
+            "next_beat": 4
+          }
+        ]
+      },
+      {
+        "beat_id": 2,
+        "title": "套现后的选择",
+        "text": "你成功套现了8000万美元，账上现金充裕。但市场开始质疑：项目方都套现了，是不是不看好未来？代币价格下跌了30%，早期投资者开始FUD。你需要证明自己仍在 committed。",
+        "choices": [
+          {
+            "text": "承诺锁定代币3年",
+            "effects": ["+Token_Price 20", "+Community_Trust 25", "set lockup=true"],
+            "next_beat": 5
+          },
+          {
+            "text": "用套现资金回购代币",
+            "effects": ["-Money 2000", "+Token_Price 25", "set buyback=true"],
+            "next_beat": 6
+          }
+        ]
+      },
+      {
+        "beat_id": 3,
+        "title": "建设的孤独",
+        "text": "你把资金投入到平台建设中——更好的渲染引擎、VR支持、企业协作工具。但问题是，用户并没有来。日活跃用户始终徘徊在2000人左右，大部分地块仍然是空的。投入产出比惨不忍睹。",
+        "choices": [
+          {
+            "text": "降价促销，吸引更多用户",
+            "effects": ["-Revenue 40", "+Users 50", "set price_cut=true"],
+            "next_beat": 7
+          },
+          {
+            "text": "专注B2B，吸引企业入驻",
+            "effects": ["+Business 25", "-Money 1000", "set b2b_focus=true"],
+            "next_beat": 8
+          }
+        ]
+      },
+      {
+        "beat_id": 4,
+        "title": "泡沫顶峰",
+        "text": "你推出了第10期土地拍卖，总计出售了90000块虚拟地块。总销售额突破3亿美元。但市场已经开始饱和，新买家越来越少，投机者开始抛售。代币价格在创出新高后迅速回落。",
+        "choices": [
+          {
+            "text": "宣布土地售罄，制造稀缺",
+            "effects": ["+Token_Price 15", "-Future_Revenue", "set sold_out=true"],
+            "next_beat": 9
+          },
+          {
+            "text": "推出二层地块，继续销售",
+            "effects": ["+Money 2000", "-Scarcity_Value 30", "set endless_supply=true"],
+            "next_beat": 10
+          }
+        ]
+      },
+      {
+        "beat_id": 7,
+        "title": "价格战陷阱",
+        "text": "降价确实吸引了新用户，但也激怒了早期高价购买者。他们在社交媒体上发起#退款运动，要求你补偿差价。更糟糕的是，低价吸引了大量投机者，他们买了地却不建设，等着涨价转手。",
+        "choices": [
+          {
+            "text": "坚持降价，不理会早期用户",
+            "effects": ["-Community_Trust 40", "+Users 30", "set prioritize_growth=true"],
+            "next_beat": 11
+          },
+          {
+            "text": "向早期用户空投补偿",
+            "effects": ["-Money 1500", "+Community_Trust 20", "set compensation=true"],
+            "next_beat": 12
+          }
+        ]
+      },
+      {
+        "beat_id": 9,
+        "title": "稀缺性失效",
+        "text": "'售罄'的宣布起初推高了价格，但用户很快发现：90000块地中，实际有建设的不到5%。大部分地块是投机者的'数字荒地'。当这些投机者开始抛售时，市场上根本没有买家。",
+        "choices": [
+          {
+            "text": "启动回购计划，稳定地价",
+            "effects": ["-Money 5000", "+Land_Price 10", "set land_buyback=true"],
+            "next_beat": 13
+          },
+          {
+            "text": "转向游戏化，吸引真实用户",
+            "effects": ["-Money 3000", "+Engagement 25", "set gamification=true"],
+            "next_beat": 14
+          }
+        ]
+      },
+      {
+        "beat_id": 13,
+        "title": "流动性枯竭",
+        "text": "回购计划消耗了你最后的现金储备，但地价仍在下跌。430万美元的地块现在挂12美元都无人问津。日活跃用户跌破50人。你的元宇宙变成了真正的'鬼城'——除了偶尔有记者来截图报道'元宇宙泡沫破灭'。",
+        "choices": [
+          {
+            "text": "承认失败，关闭项目",
+            "effects": ["-Reputation 40", "+Integrity 15", "set shutdown=true"],
+            "next_beat": 15
+          },
+          {
+            "text": "寻找接盘方，出售项目",
+            "effects": ["+Money 500", "-Reputation 20", "set fire_sale=true"],
+            "next_beat": 16
+          }
+        ]
+      }
+    ],
+    "long_term_status": {
+      "shutdown": "诚实结束，避免了更大的损失",
+      "fire_sale": "贱卖项目，但用户一无所获",
+      "gamification": "转型游戏成功，但元宇宙愿景破灭",
+      "cautionary_tale": "成为元宇宙泡沫的经典案例",
+      "ghost_town": "项目仍在运行，但空无一人"
+    },
+    "screenshot_hook": {
+      "trigger": "天价地块成交/鬼城现状",
+      "caption": "{COMPANY}元宇宙地产：从430万到12美元的泡沫破灭",
+      "visual": "虚拟地块价格对比，空旷的元宇宙场景"
+    }
+  },
+  {
+    "id": "CHAIN_20",
+    "title": "移民中介签证欺诈",
+    "category": "finance",
+    "headlines": [
+      "{COMPANY}帮助1800名客户成功移民，营收8900万美元",
+      "{CITY}移民中介{COMPANY}爆雷，8900万欺诈案，1800名客户梦碎"
+    ],
+    "boom_metrics": {
+      "revenue_usd": 89000000,
+      "client_count": 1800,
+      "fraud_amount_usd": 35000000,
+      "success_rate_claimed_pct": 98,
+      "actual_approval_rate_pct": 12
+    },
+    "beats": [
+      {
+        "beat_id": 1,
+        "title": "移民梦工厂",
+        "text": "你的移民中介公司成立5年，帮助'1800名客户'成功移民，营收8900万美元。你的秘诀是'保证成功，失败退款'的承诺——这在行业中独树一帜。实际上，你知道真实的获批率只有12%，但退款流程复杂，大部分客户最终放弃追讨。",
+        "choices": [
+          {
+            "text": "逐步改善服务，提高真实成功率",
+            "effects": ["-Profit 30", "+Integrity 25", "+Real_Success_Rate 20", "set legitimize=true"],
+            "next_beat": 2
+          },
+          {
+            "text": "维持现状，专注营销获客",
+            "effects": ["+Profit 40", "-Integrity 30", "+Marketing 50", "set deception_continue=true"],
+            "next_beat": 3
+          },
+          {
+            "text": "推出VIP保过服务，高价筛选",
+            "effects": ["+Profit 60", "+Reputation 10", "set premium_service=true"],
+            "next_beat": 4
+          }
+        ]
+      },
+      {
+        "beat_id": 2,
+        "title": "转型的阵痛",
+        "text": "提高真实成功率意味着拒绝更多客户、投入更多资源在每个案例上。短期内收入下降，员工抱怨奖金减少。一些'擅长包装虚假材料'的老员工离职，带走了部分客户资源。",
+        "choices": [
+          {
+            "text": "坚持转型，培养新团队",
+            "effects": ["-Revenue 20", "+Integrity 20", "+Long_Term_Viability 30", "set transformation=true"],
+            "next_beat": 5
+          },
+          {
+            "text": "回到老路，利润优先",
+            "effects": ["+Revenue 30", "-Integrity 25", "set backslide=true"],
+            "next_beat": 6
+          }
+        ]
+      },
+      {
+        "beat_id": 3,
+        "title": "投诉潮起",
+        "text": "随着未获批案例的累积，客户投诉开始增加。社交媒体上有受害者分享经历，虽然被你雇用的水军压制，但影响开始扩散。移民局也开始关注你的'异常高申请量'。",
+        "choices": [
+          {
+            "text": "设立专项基金处理退款",
+            "effects": ["-Money 3000", "+Reputation 15", "-Complaints 30", "set refund_fund=true"],
+            "next_beat": 7
+          },
+          {
+            "text": "找法务团队，对抗投诉",
+            "effects": ["-Money 800", "-Reputation 20", "set legal_defense=true"],
+            "next_beat": 8
+          },
+          {
+            "text": "转移资产，准备跑路",
+            "effects": ["+Money 5000", "-Integrity 100", "set flee_prep=true"],
+            "next_beat": 9
+          }
+        ]
+      },
+      {
+        "beat_id": 4,
+        "title": "VIP的真相",
+        "text": "VIP服务实际上是把高风险客户筛选出来，收取3倍价格，但用同样的低质服务。一些VIP客户发现了这一点——他们付了10万美元，得到的却是模板化的申请材料。",
+        "choices": [
+          {
+            "text": "为VIP客户提供真正优质服务",
+            "effects": ["-Profit 25", "+VIP_Satisfaction 40", "set vip_legit=true"],
+            "next_beat": 10
+          },
+          {
+            "text": "继续收割，大不了退款息事宁人",
+            "effects": ["+Profit 30", "-Integrity 30", "set vip_scam=true"],
+            "next_beat": 11
+          }
+        ]
+      },
+      {
+        "beat_id": 5,
+        "title": "转型初见成效",
+        "text": "三年后，你的真实成功率从12%提升到58%。虽然不再是'98%保证'，但客户满意度大幅提高，口碑开始自然传播。一些早期离开的员工重新联系你，希望回来工作。",
+        "choices": [
+          {
+            "text": "欢迎老员工回归，但需重新培训",
+            "effects": ["+Team 20", "+Reputation 15", "set comeback=true"],
+            "next_beat": 12
+          },
+          {
+            "text": "拒绝，维持新团队纯净",
+            "effects": ["-Team_Drama", "+Integrity 10", "set clean_slate=true"],
+            "next_beat": 13
+          }
+        ]
+      },
+      {
+        "beat_id": 7,
+        "title": "资金压力",
+        "text": "退款基金设立后，申请退款的客户激增。你的现金流开始紧张。更糟糕的是，一些客户开始联合起诉你，指控欺诈。你需要在花钱消灾和硬刚法律之间做出选择。",
+        "choices": [
+          {
+            "text": "与客户和解，赔偿+保密协议",
+            "effects": ["-Money 2500", "-Reputation 10", "+Legal_Safety 20", "set settlements=true"],
+            "next_beat": 14
+          },
+          {
+            "text": "破产保护，重组业务",
+            "effects": ["-Reputation 40", "-Money 1000", "set bankruptcy=true"],
+            "next_beat": 15
+          }
+        ]
+      },
+      {
+        "beat_id": 9,
+        "title": "跑路计划",
+        "text": "你已经把大部分资产转移到海外账户，家人也已安排出国。但临走前，一位老客户——一位退休教师——发来邮件，说她把毕生积蓄50万美元交给你，只为能和女儿团聚。这封邮件让你彻夜难眠。",
+        "choices": [
+          {
+            "text": "良心发现，退还她的钱并自首",
+            "effects": ["-Money 50", "+Integrity 50", "set conscience=true"],
+            "next_beat": 16
+          },
+          {
+            "text": "按计划跑路，不理会邮件",
+            "effects": ["+Money 4000", "-Integrity 100", "set fugitive=true"],
+            "next_beat": 17
+          }
+        ]
+      }
+    ],
+    "long_term_status": {
+      "transformation": "成功转型为正规中介，口碑恢复",
+      "fugitive": "潜逃海外，被通缉",
+      "conscience": "自首服刑，但保留了最后的尊严",
+      "bankruptcy": "破产重组，业务得以延续",
+      "cautionary_tale": "成为移民行业监管改革的契机"
+    },
+    "screenshot_hook": {
+      "trigger": "客户投诉/警方介入",
+      "caption": "{COMPANY}移民欺诈：8900万涉案，1800名客户维权",
+      "visual": "客户聚集公司，警方调查"
+    }
+  },
+  {
+    "id": "CHAIN_04",
+    "title": "潮玩盲盒帝国",
+    "category": "finance",
+    "headlines": [
+      "{COMPANY}盲盒日活突破2.3亿，平台抽成65%创行业纪录",
+      "{CITY}盲盒巨头{COMPANY}被指赌博诱导，监管风暴来袭"
+    ],
+    "boom_metrics": {
+      "daily_active_users_millions": 230,
+      "take_rate_pct": 65,
+      "annual_gmv_usd": 18000000000,
+      "secondary_market_volume_usd": 4200000000,
+      "rare_item_probability_pct": 0.003
+    },
+    "beats": [
+      {
+        "beat_id": 1,
+        "title": "隐藏款神话",
+        "text": "你的盲盒App上线一年，DAU突破2.3亿。'隐藏款'概率0.003%，却在二手市场炒到数万元。平台抽成65%——交易抽成、提现手续费、鉴定费层层叠加。一个用户为了抽隐藏款，花了8万元，最终在社交平台哭诉。这条视频获得了500万播放。",
+        "choices": [
+          {
+            "text": "公布完整概率，增加透明度",
+            "effects": ["+Transparency 30", "-Revenue 10", "+Reputation 15", "set transparency=true"],
+            "next_beat": 2
+          },
+          {
+            "text": "推出保底机制，设置消费上限",
+            "effects": ["-Revenue 15", "+User_Protection 25", "+Regulatory_Risk_Reduction 20", "set protection=true"],
+            "next_beat": 3
+          },
+          {
+            "text": "加大营销，淡化争议",
+            "effects": ["+Revenue 30", "-Reputation 20", "+Regulatory_Risk 30", "set marketing_blitz=true"],
+            "next_beat": 4
+          }
+        ]
+      },
+      {
+        "beat_id": 2,
+        "title": "透明化的代价",
+        "text": "公布完整概率后，用户发现'隐藏款'实际上比宣传的更少——因为你们暗中调整了部分批次的概率。愤怒的KOL发起#盲盒骗局话题，阅读量破10亿。监管部门发函询问。",
+        "choices": [
+          {
+            "text": "承认错误，补偿受影响用户",
+            "effects": ["-Money 5000", "+Reputation 20", "+Integrity 25", "set correction=true"],
+            "next_beat": 5
+          },
+          {
+            "text": "否认指控，找公关洗地",
+            "effects": ["-Money 1000", "-Reputation 30", "-Integrity 30", "set denial=true"],
+            "next_beat": 6
+          }
+        ]
+      },
+      {
+        "beat_id": 3,
+        "title": "保护性策略",
+        "text": "保底机制推出后，虽然单次收入下降，但用户留存率提高，长期来看LTV反而上升。更重要的是，这为你赢得了监管的好感——在同行被约谈时，你收到了'合规示范企业'的表彰。",
+        "choices": [
+          {
+            "text": "主动向监管提交行业自律公约",
+            "effects": ["+Regulatory_Standing 35", "+Reputation 25", "set industry_leader=true"],
+            "next_beat": 7
+          },
+          {
+            "text": "低调运营，不做出头鸟",
+            "effects": ["+Cash 20", "set low_profile=true"],
+            "next_beat": 8
+          }
+        ]
+      },
+      {
+        "beat_id": 4,
+        "title": "营销狂欢",
+        "text": "你推出了'10亿补贴'活动，与顶流明星合作推广，DAU继续飙升。但监管风暴正在酝酿——未成年人保护组织开始关注盲盒对青少年的影响，媒体开始报道'小学生偷钱买盲盒'的新闻。",
+        "choices": [
+          {
+            "text": "主动限制未成年人消费",
+            "effects": ["-Revenue 20", "+Regulatory_Safety 30", "set minor_protection=true"],
+            "next_beat": 9
+          },
+          {
+            "text": "维持现状，观望监管动向",
+            "effects": ["+Revenue 15", "+Regulatory_Risk 40", "set wait_and_see=true"],
+            "next_beat": 10
+          }
+        ]
+      },
+      {
+        "beat_id": 5,
+        "title": "纠错之后",
+        "text": "补偿方案花了5000万，但用户信任开始恢复。你趁机推出了'官方认证二手市场'，将原本流向第三方的交易留在平台内。这一举措让平台GMV增长了40%，同时也加强了对二手价格的控制。",
+        "choices": [
+          {
+            "text": "推出创作者计划，吸引IP入驻",
+            "effects": ["-Money 2000", "+Content 40", "+Ecosystem 30", "set creator_program=true"],
+            "next_beat": 11
+          },
+          {
+            "text": "开拓海外市场",
+            "effects": ["+Revenue 25", "+Risk 20", "set international=true"],
+            "next_beat": 12
+          }
+        ]
+      },
+      {
+        "beat_id": 9,
+        "title": "监管靴子落地",
+        "text": "监管部门发布了盲盒销售新规：不得向8岁以下儿童销售，8-18岁需家长同意，必须公示概率，不得诱导过度消费。你的未成年人保护机制让你轻松达标，而竞争对手们则手忙脚乱。",
+        "choices": [
+          {
+            "text": "借势扩大市场份额",
+            "effects": ["+Market_Share 30", "+Revenue 20", "set market_expansion=true"],
+            "next_beat": 13
+          },
+          {
+            "text": "推动行业整合，收购竞争对手",
+            "effects": ["-Money 8000", "+Market_Share 50", "set consolidation=true"],
+            "next_beat": 14
+          }
+        ]
+      },
+      {
+        "beat_id": 10,
+        "title": "风暴中心",
+        "text": "央媒发表评论员文章《盲盒不是潘多拉魔盒》，点名批评行业乱象。你的公司因为规模最大，成为主要靶子。股价（如果上市）暴跌，合作IP方开始观望，员工人心惶惶。",
+        "choices": [
+          {
+            "text": "紧急整改，全面合规",
+            "effects": ["-Revenue 40", "+Regulatory_Safety 40", "set emergency_compliance=true"],
+            "next_beat": 15
+          },
+          {
+            "text": "寻求政府关系，危机公关",
+            "effects": ["-Money 2000", "+Regulatory_Standing 20", "set lobbying=true"],
+            "next_beat": 16
+          }
+        ]
+      }
+    ],
+    "long_term_status": {
+      "industry_leader": "成为行业自律标杆，获得监管背书",
+      "market_expansion": "监管风暴后逆势扩张，成为绝对龙头",
+      "consolidation": "通过并购成为垄断者，但面临反垄断审查",
+      "emergency_compliance": "被迫整改，元气大伤但存活",
+      "cautionary_tale": "成为过度商业化的反面教材"
+    },
+    "screenshot_hook": {
+      "trigger": "DAU突破/监管点名",
+      "caption": "{COMPANY}盲盒帝国：2.3亿日活，65%抽成的商业奇迹与争议",
+      "visual": "App数据大屏，盲盒开箱瞬间"
+    }
+  },
+  {
+    "id": "CHAIN_07",
+    "title": "白领宫斗CFO夺权",
+    "category": "finance",
+    "headlines": [
+      "{COMPANY}CFO披露24亿美元现金储备，宣布8倍对赌条款触发",
+      "{CITY}科技巨头{COMPANY}宫斗升级，创始人被董事会罢免"
+    ],
+    "boom_metrics": {
+      "cash_reserves_usd": 2400000000,
+      "ratchet_multiplier": 8,
+      "founder_equity_pct": 12,
+      "cfo_equity_pct": 3,
+      "control_votes_pct": 51
+    },
+    "beats": [
+      {
+        "beat_id": 1,
+        "title": "董事会的暗流",
+        "text": "公司账上有24亿美元现金，但业务增长放缓。你的CFO——一位来自华尔街的资深玩家——在董事会上提出：'我们应该用这笔钱进行战略收购，而不是守着现金贬值。'你感觉到他的野心不止于此，他开始频繁单独约见董事。",
+        "choices": [
+          {
+            "text": "召开全体董事会议，明确战略方向",
+            "effects": ["+Board_Unity 15", "+Reputation 10", "set board_meeting=true"],
+            "next_beat": 2
+          },
+          {
+            "text": "私下与关键董事沟通，巩固支持",
+            "effects": ["+Founder_Control 20", "-Transparency 10", "set backchannel=true"],
+            "next_beat": 3
+          },
+          {
+            "text": "支持CFO的收购提议，观察其动机",
+            "effects": ["+CFO_Relationship 15", "+Risk 20", "set watch_mode=true"],
+            "next_beat": 4
+          }
+        ]
+      },
+      {
+        "beat_id": 2,
+        "title": "公开对决",
+        "text": "董事会上，CFO正式发难。他展示了一份详细的'创始人能力评估报告'，质疑你的战略眼光，并引用了一份8倍对赌条款——如果公司无法在明年达成特定指标，你的投票权将被稀释至失去控制权。这份条款是当年融资时你签的，早已忘记。",
+        "choices": [
+          {
+            "text": "据理力争，指出条款的法律漏洞",
+            "effects": ["+Legal_Position 20", "+Stress 30", "set legal_challenge=true"],
+            "next_beat": 5
+          },
+          {
+            "text": "提议和解，分享权力",
+            "effects": ["-Power 30", "+Board_Stability 20", "set power_share=true"],
+            "next_beat": 6
+          },
+          {
+            "text": "发动创始人特殊投票权",
+            "effects": ["+Power 25", "-Reputation 20", "set nuclear_option=true"],
+            "next_beat": 7
+          }
+        ]
+      },
+      {
+        "beat_id": 3,
+        "title": "暗战",
+        "text": "你私下与几位长期支持你的董事达成默契，他们承诺在关键时刻支持你。但CFO也不是省油的灯——他联系了几个激进对冲基金，暗示如果更换管理层，股价会有'显著 upside'。",
+        "choices": [
+          {
+            "text": "揭露CFO与对冲基金的不当联系",
+            "effects": ["+Reputation 15", "+CFO_Pressure 20", "set expose_cfo=true"],
+            "next_beat": 8
+          },
+          {
+            "text": "提出反收购计划，巩固创始人地位",
+            "effects": ["-Money 500", "+Founder_Security 30", "set defense_plan=true"],
+            "next_beat": 9
+          }
+        ]
+      },
+      {
+        "beat_id": 4,
+        "title": "CFO的收购游戏",
+        "text": "CFO主导的第一笔收购完成——以8亿美元收购一家亏损的AI公司。表面上看是为公司布局未来，但你发现被收购公司的CEO是CFO的哈佛同学。更可疑的是，收购价格远超市场估值。",
+        "choices": [
+          {
+            "text": "叫停后续收购，发起内部调查",
+            "effects": ["+Integrity 25", "-CFO_Relationship 40", "set investigation=true"],
+            "next_beat": 10
+          },
+          {
+            "text": "默许，但收集证据",
+            "effects": ["+Evidence 30", "-Integrity 15", "+Stress 20", "set gather_evidence=true"],
+            "next_beat": 11
+          }
+        ]
+      },
+      {
+        "beat_id": 5,
+        "title": "法律战",
+        "text": "你的律师团队发现，那份8倍对赌条款存在一个关键漏洞：触发条件中的'活跃用户'定义模糊不清。如果采用你的解释，条款尚未触发。CFO的律师团队则持相反观点。这将是一场昂贵的法律战。",
+        "choices": [
+          {
+            "text": "全面开战，不惜一切代价",
+            "effects": ["-Money 3000", "+Power 20", "+Stress 40", "set all_out_war=true"],
+            "next_beat": 12
+          },
+          {
+            "text": "寻求庭外和解，保留面子",
+            "effects": ["-Money 1000", "-Power 15", "+Reputation 10", "set settlement=true"],
+            "next_beat": 13
+          }
+        ]
+      },
+      {
+        "beat_id": 7,
+        "title": "核选项",
+        "text": "你动用了创始人特殊投票权——一股10票的超级投票权条款——强行否决了CFO的提案。CFO当场宣布辞职，并在离职邮件中暗示'公司治理存在根本性问题'。媒体开始关注这场'宫斗'，股价波动加剧。",
+        "choices": [
+          {
+            "text": "公开发声，解释决策原因",
+            "effects": ["+Reputation 10", "+Transparency 15", "set public_explanation=true"],
+            "next_beat": 14
+          },
+          {
+            "text": "保持沉默，让时间平息",
+            "effects": ["-Media_Attention 10", "+Mystery 20", "set silent_treatment=true"],
+            "next_beat": 15
+          }
+        ]
+      },
+      {
+        "beat_id": 10,
+        "title": "调查升级",
+        "text": "内部调查发现了更多问题：CFO在收购中收受回扣，涉嫌利益输送。董事会震惊，几位原本中立的董事转而支持你。但CFO已经有所准备——他手里有你早期的一些'不那么合规'的决策记录。",
+        "choices": [
+          {
+            "text": "与CFO谈判，互相保密，和平分手",
+            "effects": ["-Integrity 20", "+Peace 30", "set mutual_destruction_avoided=true"],
+            "next_beat": 16
+          },
+          {
+            "text": "全面揭发，哪怕鱼死网破",
+            "effects": ["+Integrity 30", "-Reputation 25", "set scorched_earth=true"],
+            "next_beat": 17
+          }
+        ]
+      }
+    ],
+    "long_term_status": {
+      "power_share": "权力分享后的微妙平衡，公司进入双头治理",
+      "all_out_war": "法律战胜利，但公司元气大伤",
+      "settlement": "和解收场，各自安好",
+      "mutual_destruction_avoided": "互相握有把柄，形成不稳定和平",
+      "scorched_earth": "揭发成功但两败俱伤，成为行业丑闻"
+    },
+    "screenshot_hook": {
+      "trigger": "董事会投票/宫斗曝光",
+      "caption": "{COMPANY}宫斗：CFO发动8倍对赌，创始人险失控制权",
+      "visual": "董事会投票结果，股权结构变化"
+    }
+  }
+]
