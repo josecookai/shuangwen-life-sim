@@ -1,520 +1,929 @@
 [
   {
-    "chain_id": "CHAIN_01",
-    "chain_name": "AI独角兽大模型之战",
-    "route_tags": ["创业","AI"],
-    "boom_metrics": [
-      {"k": "valuation_usd", "v": 4800000000},
-      {"k": "funding_series_c", "v": 480000000},
-      {"k": "gpu_cluster_count", "v": 10000},
-      {"k": "daily_inference_cost", "v": 850000}
+    "id": "CHAIN_01",
+    "title": "AI独角兽大模型之战",
+    "category": "tech",
+    "headlines": [
+      "{COMPANY}估值48亿美元登顶独角兽榜首，大模型竞赛进入白热化阶段",
+      "{CITY}AI独角兽{COMPANY}获12亿美元融资，训练成本飙升至1.2亿美元"
     ],
-    "headlines": {
-      "headline_success": "{CITY} — {COMPANY} closes $480M Series C at $4.8B valuation, 10,000-GPU cluster powers generative AI platform serving 12M enterprise users",
-      "headline_failure": "{CITY} — {COMPANY} shutters after $120M training run yields hallucination-prone model, investors write down $380M as compute costs crush runway"
+    "boom_metrics": {
+      "valuation_usd": 4800000000,
+      "training_cost_usd": 120000000,
+      "model_parameters": "1.2T",
+      "inference_latency_ms": 89,
+      "market_share_pct": 23.5
     },
     "beats": [
       {
-        "beat_id": "B1",
-        "beat_type": "前置",
-        "text": "你在车库用4张RTX 3090训练出了能写诗的7B模型，GitHub星标一夜破万。红杉的合伙人凌晨三点打来电话：'我们能谈谈吗？'"
-      },
-      {
-        "beat_id": "B2",
-        "beat_type": "上升",
-        "text": "种子轮800万美元到账，你租下了 Palo Alto 的整层办公室。团队从3人暴涨到47人，每天烧掉2万美元云计算费用。"
-      },
-      {
-        "beat_id": "B3",
-        "beat_type": "爆发前夜",
-        "text": "A轮5000万美元由 a16z 领投，估值冲到4亿美元。竞争对手 Anthropic 挖走了你的首席科学家，你连夜召开全员会稳定军心。"
-      },
-      {
-        "beat_id": "B4",
-        "beat_type": "分支选择",
-        "text": "B轮融资进入关键期，投资方开出两个截然不同的方案。谷歌云提出'算力换股权'，红杉则要求你承诺18个月内达到1亿美元ARR。",
-        "choice_point": true,
+        "beat_id": 1,
+        "title": "创始人的深夜抉择",
+        "text": "凌晨3点，你站在公司落地窗前俯瞰{CITY}的夜景。CTO刚发来消息：新模型训练需要追加5000万美元，竞争对手明天就要发布产品。你的A轮领投方暗示如果继续烧钱，下一轮融资他们要考虑退出。银行账户里还有8000万，够烧6个月。",
         "choices": [
           {
-            "choice_text": "接受谷歌云方案：1亿美元算力额度+15%股权，绑定云生态",
-            "immediate_effects": "+Money 0, +Asset 100, set cloud_locked=True, +Stress 25",
-            "next_beat": "B5A",
-            "stakes": "赌的是谷歌的算力能让你训练出GPT-4级别的模型，但从此被云厂商绑定"
+            "text": "梭哈！All-in训练新模型",
+            "effects": ["-Money 5000", "+Tech 30", "+Stress 40", "set all_in_ai=true"],
+            "next_beat": 2
           },
           {
-            "choice_text": "接受红杉对赌：4000万美元现金+12%股权，承诺18个月ARR破亿",
-            "immediate_effects": "+Money 400, +Debt 0, set arr_pressure=True, +Stress 40",
-            "next_beat": "B5B",
-            "stakes": "赌的是商业化速度，失败将触发清算条款失去控制权"
+            "text": "保守策略，优化现有模型",
+            "effects": ["-Money 1500", "+Tech 15", "+Reputation 10"],
+            "next_beat": 3
+          },
+          {
+            "text": "寻求战略合作，分摊成本",
+            "effects": ["+Money 2000", "-Equity 15", "+Reputation 20"],
+            "next_beat": 4
           }
         ]
       },
       {
-        "beat_id": "B5A",
-        "beat_type": "高潮",
-        "text": "谷歌的TPU集群让你的训练速度提升17倍。6个月后发布的大模型在MMLU基准测试上超越GPT-3.5，企业客户排队签约。"
+        "beat_id": 2,
+        "title": "模型训练崩溃",
+        "text": "训练进行到第47天，集群突然出现梯度爆炸。5000万美元的训练成本打了水漂。团队士气崩溃，两名核心工程师递交辞呈。董事会召开紧急会议，要求你给出解释。媒体已经嗅到了风声，明天头条可能就是'独角兽陨落'。",
+        "choices": [
+          {
+            "text": "承担责任，公开承认技术挫折",
+            "effects": ["-Reputation 30", "+Integrity 20", "set transparent_crisis=true"],
+            "next_beat": 5
+          },
+          {
+            "text": "隐瞒故障，宣布'技术升级'",
+            "effects": ["+Reputation 10", "-Integrity 30", "set cover_up=true", "+Stress 50"],
+            "next_beat": 6
+          }
+        ]
       },
       {
-        "beat_id": "B5B",
-        "beat_type": "高潮",
-        "text": "销售团队疯狂扩张到200人，第14个月ARR突破1.2亿美元。红杉追加投资，估值直接跳到48亿美元。"
+        "beat_id": 3,
+        "title": "竞品发布会碾压",
+        "text": "竞争对手的模型在各项基准测试中全面超越你。投资人开始质疑你的技术路线，股价（如果是上市公司）或估值预期大幅下跌。团队内部开始出现质疑声音，有人建议你转型做应用层而不是基础模型。",
+        "choices": [
+          {
+            "text": "坚持基础模型路线，迎头赶上",
+            "effects": ["-Money 3000", "+Tech 20", "+Stress 30"],
+            "next_beat": 7
+          },
+          {
+            "text": "转型做行业垂直应用",
+            "effects": ["+Money 1000", "-Tech 10", "+Business 25", "set pivot_applied=true"],
+            "next_beat": 8
+          }
+        ]
       },
       {
-        "beat_id": "B6",
-        "beat_type": "代价显现",
-        "text": "谷歌版：你的模型被迫使用谷歌专有的TensorFlow格式，迁移成本高达8000万。微软开始游说客户不要采购'谷歌系'AI。"
+        "beat_id": 4,
+        "title": "战略伙伴反水",
+        "text": "你的战略合作伙伴在签约前夜突然宣布与竞争对手合并。消息泄露，行业震动。你不仅失去了分摊成本的机会，还被市场视为'被抛弃的一方'。三个潜在客户因此取消了合作意向。",
+        "choices": [
+          {
+            "text": "发起法律诉讼，指控恶意竞争",
+            "effects": ["-Money 500", "+Reputation 15", "set legal_battle=true"],
+            "next_beat": 9
+          },
+          {
+            "text": "快速寻找新的合作伙伴",
+            "effects": ["-Stress 20", "+Business 15", "+Money 1500"],
+            "next_beat": 10
+          }
+        ]
       },
       {
-        "beat_id": "B7",
-        "beat_type": "终局",
-        "text": "C轮4.8亿美元到账，你成了AI新贵。但每天85万美元的推理成本像无底洞，你在董事会上说：'要么成为OpenAI，要么成为历史。'"
+        "beat_id": 5,
+        "title": "透明策略赢得尊重",
+        "text": "你的坦诚赢得了技术社区的尊重。几位顶级AI研究员主动表示愿意加入。一个神秘的国家级基金向你抛出橄榄枝，愿意提供无对赌条款的战略投资。这正是你需要的转机。",
+        "choices": [
+          {
+            "text": "接受国资背景投资",
+            "effects": ["+Money 8000", "+Reputation 25", "set gov_backing=true", "-Equity 10"],
+            "next_beat": 11
+          },
+          {
+            "text": "拒绝，坚持纯市场化路线",
+            "effects": ["+Integrity 20", "-Money 2000", "+Reputation 10"],
+            "next_beat": 12
+          }
+        ]
+      },
+      {
+        "beat_id": 6,
+        "title": "谎言被揭穿",
+        "text": "一名离职工程师向媒体泄露了训练失败的内部邮件。你的'技术升级'声明被证明是谎言。股价暴跌40%，两名董事辞职，美国业务合作伙伴宣布终止合作。你面临职业生涯最大的诚信危机。",
+        "choices": [
+          {
+            "text": "引咎辞职，让CTO接任CEO",
+            "effects": ["-Reputation 50", "-Position CEO", "set resigned=true"],
+            "next_beat": 13
+          },
+          {
+            "text": "坚决不辞职，重组董事会",
+            "effects": ["+Stress 60", "-Reputation 30", "-Equity 5", "set survived_crisis=true"],
+            "next_beat": 14
+          }
+        ]
+      },
+      {
+        "beat_id": 7,
+        "title": "技术突破临界点",
+        "text": "坚持终于迎来回报。你的团队在多模态理解上取得突破性进展，模型在权威评测中首次超越GPT-4。微软和谷歌同时发来收购意向，估值分别开到了60亿和80亿美元。",
+        "choices": [
+          {
+            "text": "接受微软收购",
+            "effects": ["+Money 60000", "set acquired=true", "set tech_hero=true"],
+            "next_beat": 15
+          },
+          {
+            "text": "拒绝收购，继续独立发展",
+            "effects": ["+Reputation 40", "+Tech 30", "set independent_ai=true"],
+            "next_beat": 16
+          }
+        ]
+      },
+      {
+        "beat_id": 8,
+        "title": "垂直领域的小而美",
+        "text": "转型做医疗AI应用的决定被证明是正确的。你的产品在三家顶级医院部署后，诊断准确率超过资深医生。虽然失去了'改变世界'的光环，但你找到了可持续的商业模式。年营收突破2亿美元，首次实现盈利。",
+        "choices": [
+          {
+            "text": "深耕医疗，IPO上市",
+            "effects": ["+Money 15000", "+Reputation 35", "set medical_ai_ipo=true"],
+            "next_beat": 17
+          }
+        ]
       }
     ],
-    "long_term_status": ["ipo_ready", "burnout", "cloud_locked"],
-    "screenshot_hook": "从车库4张显卡到48亿美元估值的AI独角兽之路"
+    "long_term_status": {
+      "tech_hero": "被视为AI领域的传奇创业者",
+      "acquired": "公司被科技巨头收购，财富自由",
+      "independent_ai": "坚持独立发展，成为行业标杆",
+      "medical_ai_ipo": "在垂直领域成功上市",
+      "resigned": "因诚信危机离职，声誉受损",
+      "survived_crisis": "艰难度过危机，但元气大伤"
+    },
+    "screenshot_hook": {
+      "trigger": "模型训练完成/突破 benchmark",
+      "caption": "{COMPANY}模型登顶榜首，估值飙升至48亿美元",
+      "visual": "训练集群全绿，benchmark图表第一"
+    }
   },
   {
-    "chain_id": "CHAIN_02",
-    "chain_name": "EV新王登基",
-    "route_tags": ["创业","EV"],
-    "boom_metrics": [
-      {"k": "ipo_valuation_usd", "v": 82000000000},
-      {"k": "ipo_raise_usd", "v": 2100000000},
-      {"k": "annual_delivery", "v": 487000},
-      {"k": "factory_capacity", "v": 500000}
+    "id": "CHAIN_02",
+    "title": "EV新王登基",
+    "category": "tech",
+    "headlines": [
+      "{COMPANY}纽交所IPO募资82亿美元，市值突破600亿",
+      "{CITY}电动车企{COMPANY}创纪录IPO后召回45万辆车，市值蒸发180亿"
     ],
-    "headlines": {
-      "headline_success": "{REGION} — {COMPANY} surges 127% in NYSE debut, market cap hits $82B on 487K annual deliveries, becomes world's 3rd most valuable automaker",
-      "headline_failure": "{REGION} — {COMPANY} recalls 340,000 vehicles over battery fire risk, shares plunge 68% from IPO peak, $12B market value evaporates"
+    "boom_metrics": {
+      "ipo_raised_usd": 8200000000,
+      "peak_market_cap_usd": 60000000000,
+      "recall_units": 450000,
+      "market_cap_loss_usd": 18000000000,
+      "production_capacity_annual": 800000
     },
     "beats": [
       {
-        "beat_id": "B1",
-        "beat_type": "前置",
-        "text": "你在特斯拉工作5年后辞职，带着自研的4680电池配方和7名工程师在上海郊区租了个废弃工厂。账上只有300万人民币。"
-      },
-      {
-        "beat_id": "B2",
-        "beat_type": "上升",
-        "text": "第一款量产车下线那天，你在车间睡了一整晚。车辆续航比Model Y多80公里，售价低3万。首批1000台72小时售罄。"
-      },
-      {
-        "beat_id": "B3",
-        "beat_type": "爆发前夜",
-        "text": "合肥市政府伸出橄榄枝：70亿投资+土地+供应链配套，条件是总部迁至合肥。地方政府之间的抢人大战让你成了香饽饽。"
-      },
-      {
-        "beat_id": "B4",
-        "beat_type": "分支选择",
-        "text": "合肥要求你在36个月内实现年产50万辆，否则触发回购条款。同时深圳给的条件是现成的比亚迪供应链但估值减半。",
-        "choice_point": true,
+        "beat_id": 1,
+        "title": "敲钟前的48小时",
+        "text": "纽交所的敲钟仪式就在后天，但质量部门刚刚发现了一个潜在的安全隐患——电池管理系统在极端低温下可能失效。法律顾问建议推迟IPO进行彻底调查，但投行团队警告说推迟将意味着至少6个月的延迟和估值下调30%。",
         "choices": [
           {
-            "choice_text": "接受合肥对赌：70亿+超级工厂，赌50万辆产能",
-            "immediate_effects": "+Money 7000, +Asset 3000, set government_backing=True, set capacity_pressure=True, +Stress 35",
-            "next_beat": "B5A",
-            "stakes": "赌的是产能爬坡速度，失败将面临政府回购失去公司"
+            "text": "推迟IPO，彻底排查问题",
+            "effects": ["-Reputation 25", "-Money 2000", "+Integrity 30", "set delayed_ipo=true"],
+            "next_beat": 2
           },
           {
-            "choice_text": "选择深圳稳健路线：30亿+成熟供应链，放弃估值",
-            "immediate_effects": "+Money 3000, -Reputation 20, set conservative_growth=True, +Stress 15",
-            "next_beat": "B5B",
-            "stakes": "赌的是稳定现金流但可能错过窗口期被竞品碾压"
+            "text": "按计划IPO，同步内部修复",
+            "effects": ["+Money 82000", "+Reputation 50", "+Stress 40", "set risk_ipo=true"],
+            "next_beat": 3
           }
         ]
       },
       {
-        "beat_id": "B5A",
-        "beat_type": "高潮",
-        "text": "合肥工厂18个月建成投产，第24个月月产能突破4万辆。你亲自睡在工厂三个月解决问题，被媒体称为'EV疯子'。"
+        "beat_id": 2,
+        "title": "延迟的代价与回报",
+        "text": "推迟IPO的消息引发市场恐慌，竞争对手趁机发布新产品抢占市场份额。但质量排查发现了一个严重的设计缺陷，如果带着这个问题上市，后果不堪设想。现在你需要在修复质量和保持竞争力之间找到平衡。",
+        "choices": [
+          {
+            "text": "全面召回已售车辆",
+            "effects": ["-Money 5000", "+Reputation 20", "set responsible_recall=true"],
+            "next_beat": 4
+          },
+          {
+            "text": "仅修复生产线，已售车辆OTA升级",
+            "effects": ["-Money 800", "+Reputation 5", "set ota_fix=true"],
+            "next_beat": 5
+          }
+        ]
       },
       {
-        "beat_id": "B5B",
-        "beat_type": "高潮",
-        "text": "依托比亚迪供应链，你的毛利率比合肥路线高出8个百分点。稳扎稳打做到年销20万辆，虽然慢但活得滋润。"
+        "beat_id": 3,
+        "title": "IPO狂欢",
+        "text": "开盘股价飙升48%，你一夜之间成为亿万富翁。庆祝派对上，投行家、投资人和媒体簇拥着你。但QA总监的眼神让你不安——他知道那个隐患。第二天开盘前，你需要决定是否向董事会坦白。",
+        "choices": [
+          {
+            "text": "向董事会和盘托出",
+            "effects": ["-Reputation 15", "+Integrity 25", "set board_aware=true"],
+            "next_beat": 6
+          },
+          {
+            "text": "保持沉默，加速修复",
+            "effects": ["+Stress 50", "-Integrity 30", "set hidden_defect=true"],
+            "next_beat": 7
+          }
+        ]
       },
       {
-        "beat_id": "B6",
-        "beat_type": "爆发",
-        "text": "合肥版：第34个月年产能达到50万辆，如期完成对赌。你站上纽交所敲钟台，股价首日暴涨127%，市值820亿美元。"
+        "beat_id": 4,
+        "title": "负责任的代价",
+        "text": "主动召回赢得了消费者信任，但也消耗了大量现金。原计划用于新工厂建设的资金被迫挪用。竞争对手趁机扩大产能，市场份额差距拉大。投资人开始质疑你的决策是否过于保守。",
+        "choices": [
+          {
+            "text": "发行可转债补充资金",
+            "effects": ["+Money 3000", "-Equity 0", "set bond_issued=true"],
+            "next_beat": 8
+          },
+          {
+            "text": "寻求战略投资，哪怕稀释股权",
+            "effects": ["+Money 5000", "-Equity 12", "set strategic_investor=true"],
+            "next_beat": 9
+          }
+        ]
       },
       {
-        "beat_id": "B7",
-        "beat_type": "终局",
-        "text": "成为第三大车企的喜悦还没散去，SEC开始调查你的交付数据。做空机构发布报告指控你'虚报订单'。真正的战争才刚刚开始。"
+        "beat_id": 5,
+        "title": "OTA升级的隐患",
+        "text": "OTA升级方案节省了成本，但一名车主在严寒地区发生了电池故障事故。虽然没有人员伤亡，但媒体开始关注你的质量管控。监管机构发函询问详情。更糟糕的是，故障视频在短视频平台获得了千万播放。",
+        "choices": [
+          {
+            "text": "立即公开回应并启动召回",
+            "effects": ["-Reputation 20", "-Money 3000", "set forced_recall=true"],
+            "next_beat": 10
+          },
+          {
+            "text": "低调处理，与车主私了",
+            "effects": ["-Money 50", "-Integrity 40", "+Stress 60", "set cover_up_risk=true"],
+            "next_beat": 11
+          }
+        ]
+      },
+      {
+        "beat_id": 6,
+        "title": "董事会风暴",
+        "text": "董事会内部出现严重分歧。独立董事要求立即公开披露风险，而投资方代表担心股价暴跌。争论持续到凌晨，最终达成妥协：成立特别委员会调查，同时暂停新车交付。消息泄露，盘后交易股价下跌12%。",
+        "choices": [
+          {
+            "text": "主动召开新闻发布会",
+            "effects": ["-Reputation 10", "+Integrity 20", "set proactive_disclosure=true"],
+            "next_beat": 12
+          },
+          {
+            "text": "等待调查结果再发声",
+            "effects": ["+Stress 30", "-Reputation 5", "set wait_and_see=true"],
+            "next_beat": 13
+          }
+        ]
+      },
+      {
+        "beat_id": 7,
+        "title": "秘密修复进行中",
+        "text": "你秘密组建了'凤凰小队'，由最顶尖的工程师组成，目标是在被媒体发现之前修复缺陷。他们日夜不停地工作，但时间紧迫。与此同时，销量持续攀升，每卖出一辆车，未来的召回成本就增加一分。",
+        "choices": [
+          {
+            "text": "冒险推出新软件版本",
+            "effects": ["+Reputation 10", "-Tech 5", "set rushed_fix=true"],
+            "next_beat": 14
+          },
+          {
+            "text": "申请监管部门批准延长期限",
+            "effects": ["-Reputation 15", "+Integrity 10", "set regulatory_delay=true"],
+            "next_beat": 15
+          }
+        ]
       }
     ],
-    "long_term_status": ["ipo_ready", "government_backing", "short_attack_risk"],
-    "screenshot_hook": "从特斯拉离职到820亿美元市值的EV新王诞生"
+    "long_term_status": {
+      "responsible_recall": "以质量赢得了长期信任，但失去了先发优势",
+      "forced_recall": "被迫召回，品牌受损但及时止损",
+      "proactive_disclosure": "危机公关典范，赢得监管认可",
+      "cover_up_risk": "隐瞒失败，面临集体诉讼风险",
+      "tech_hero": "技术创新者形象",
+      "cautionary_tale": "成为商学院风险管理案例"
+    },
+    "screenshot_hook": {
+      "trigger": "IPO敲钟/市值突破",
+      "caption": "{COMPANY}纽交所IPO，市值突破600亿美元",
+      "visual": "敲钟现场，股价大屏显示+48%"
+    }
   },
   {
-    "chain_id": "CHAIN_03",
-    "chain_name": "Web3交易所48小时",
-    "route_tags": ["创业","Web3"],
-    "boom_metrics": [
-      {"k": "peak_volume_24h_usd", "v": 18000000000},
-      {"k": "user_funds_locked_usd", "v": 3200000000},
-      {"k": "withdrawal_queue_usd", "v": 890000000},
-      {"k": "valuation_pre_crash_usd", "v": 8500000000}
+    "id": "CHAIN_03",
+    "title": "Web3交易所48小时",
+    "category": "tech",
+    "headlines": [
+      "{COMPANY}日交易量突破180亿美元，跻身全球前三交易所",
+      "{CITY}交易所{COMPANY}遭遇32亿美元资金缺口，48小时生死时速"
     ],
-    "headlines": {
-      "headline_success": "{CITY} — {COMPANY} processes $18B in 24H volume, becomes world's 3rd largest crypto exchange, user AUM crosses $8.5B milestone",
-      "headline_failure": "{CITY} — {COMPANY} halts withdrawals after $890M bank run, $3.2B user funds frozen, regulators seize cold wallets in dawn raid"
+    "boom_metrics": {
+      "daily_volume_usd": 18000000000,
+      "funding_gap_usd": 3200000000,
+      "user_count_millions": 12.5,
+      "peak_btc_price_usd": 84700,
+      "liquidity_ratio_pct": 18.3
     },
     "beats": [
       {
-        "beat_id": "B1",
-        "beat_type": "前置",
-        "text": "2020年DeFi夏天，你在公寓里写出这个交易所的智能合约。没有KYC、100倍杠杆、支持200种小币种，赌徒们蜂拥而至。"
-      },
-      {
-        "beat_id": "B2",
-        "beat_type": "上升",
-        "text": "日交易量从1000万冲到10亿美元只用了6个月。你搬到迪拜，租下哈利法塔整层办公室，团队扩张到400人。"
-      },
-      {
-        "beat_id": "B3",
-        "beat_type": "爆发前夜",
-        "text": "某老牌交易所被黑导致4亿美元损失，用户恐慌性涌向你的平台。单日新增注册50万，服务器三次宕机。"
-      },
-      {
-        "beat_id": "B4",
-        "beat_type": "分支选择",
-        "text": "风控系统报警：平台的热钱包只够支撑12小时的提现。你可以选择限制提现速度，或者动用用户资金维持流动性。",
-        "choice_point": true,
+        "beat_id": 1,
+        "title": "异常提现潮",
+        "text": "早上8点，风控系统发出警报：过去4小时提现请求超过正常水平300%。你的首席风险官面色凝重地走进办公室：'可能是银行挤兑，我们冷钱包的流动性只够支撑36小时。'与此同时，一条关于'交易所资不抵债'的谣言在推特上开始传播。",
         "choices": [
           {
-            "choice_text": "宣布'系统维护'限制提现，每天最多5000万美元",
-            "immediate_effects": "-Reputation 40, +Stress 30, set withdrawal_limit=True, +Risk 25",
-            "next_beat": "B5A",
-            "stakes": "赌的是用户不会恐慌挤兑，但可能引发社交媒体暴雷"
+            "text": "立即暂停提现，争取时间",
+            "effects": ["-Reputation 40", "+Stress 50", "set withdraw_halted=true"],
+            "next_beat": 2
           },
           {
-            "choice_text": "秘密挪用用户存款维持流动性，承诺48小时内补回",
-            "immediate_effects": "+Risk 60, +Stress 50, set fund_commingling=True, -Morality 30",
-            "next_beat": "B5B",
-            "stakes": "赌的是市场回暖速度，一旦暴露就是庞氏骗局指控"
+            "text": "开放提现，同时寻求紧急融资",
+            "effects": ["-Money 1500", "+Reputation 10", "+Stress 60", "set open_withdraw=true"],
+            "next_beat": 3
+          },
+          {
+            "text": "发布储备金证明，稳定市场信心",
+            "effects": ["+Reputation 15", "-Money 0", "set proof_of_reserves=true"],
+            "next_beat": 4
           }
         ]
       },
       {
-        "beat_id": "B5A",
-        "beat_type": "高潮",
-        "text": "提现限制消息泄露，Twitter上#ExitScam话题 trending。用户恐慌性抛售平台币，24小时内跌去70%。"
+        "beat_id": 2,
+        "title": "暂停提现的后果",
+        "text": "暂停提现的公告发布后，恐慌指数飙升。用户涌入社交媒体表达愤怒，# boycott标签开始 trending。三个重要的做市商宣布停止合作。现在你有48小时找到32亿美元，否则将面临破产清算。",
+        "choices": [
+          {
+            "text": "联系币安/FTX寻求收购",
+            "effects": ["+Money 32000", "-Equity 100", "set acquired_by_rival=true"],
+            "next_beat": 5
+          },
+          {
+            "text": "向传统金融机构求助",
+            "effects": ["-Reputation 10", "set tradfi_bailout=true"],
+            "next_beat": 6
+          }
+        ]
       },
       {
-        "beat_id": "B5B",
-        "beat_type": "高潮",
-        "text": "你成功补回了资金，但一名工程师发现了账本异常并向媒体爆料。CoinDesk头版：'交易所挪用用户资金'。"
+        "beat_id": 3,
+        "title": "流动性枯竭边缘",
+        "text": "坚持开放提现的决定让市场对你的信心有所提升，但资金正以每分钟数百万美元的速度流出。18小时后，冷钱包将见底。你需要在资金和信誉之间做出最后的抉择。",
+        "choices": [
+          {
+            "text": "最后时刻暂停提现",
+            "effects": ["-Reputation 30", "-Integrity 20", "set last_minute_halt=true"],
+            "next_beat": 2
+          },
+          {
+            "text": "赌上个人资产作为担保",
+            "effects": ["-Money 8000", "+Reputation 35", "+Integrity 30", "set personal_guarantee=true"],
+            "next_beat": 7
+          }
+        ]
       },
       {
-        "beat_id": "B6",
-        "beat_type": "崩塌",
-        "text": "监管 dawn raid。8.9亿美元的提现请求排队，冷钱包被冻结。你在机场VIP室收到消息：'别回迪拜了。'"
+        "beat_id": 4,
+        "title": "储备金证明的争议",
+        "text": "你发布的储备金证明被社区质疑——快照时间可疑，部分资产是平台代币。虽然减缓了提现速度，但质疑声并未停止。一位知名链上分析师发布长文，声称发现了'会计技巧'。",
+        "choices": [
+          {
+            "text": "邀请第三方审计机构入驻",
+            "effects": ["+Reputation 20", "-Money 200", "set third_party_audit=true"],
+            "next_beat": 8
+          },
+          {
+            "text": "发布更详细的链上数据",
+            "effects": ["+Reputation 10", "-Money 0", "+Transparency 15"],
+            "next_beat": 9
+          }
+        ]
       },
       {
-        "beat_id": "B7",
-        "beat_type": "终局",
-        "text": "48小时内从第三大交易所到一文不值。32亿美元用户资金被冻结，你在塞舌尔的小旅馆里看着新闻报道自己的通缉令。"
+        "beat_id": 5,
+        "title": "被收购的命运",
+        "text": "币安的收购团队已经到达{CITY}。他们的条件很苛刻：100%股权收购，你个人需要签署3年竞业禁止协议，核心团队将被替换。但作为交换，所有用户的资金将得到保障，你的早期投资人也能拿回本金。",
+        "choices": [
+          {
+            "text": "接受收购，保护用户",
+            "effects": ["+Money 5000", "-Position CEO", "set exit_acquired=true", "+Integrity 25"],
+            "next_beat": 10
+          },
+          {
+            "text": "拒绝，寻找其他出路",
+            "effects": ["-Money 1000", "+Stress 70", "set defiant=true"],
+            "next_beat": 11
+          }
+        ]
+      },
+      {
+        "beat_id": 7,
+        "title": "个人担保的豪赌",
+        "text": "你用个人全部身家作为担保的消息在加密社区传开。出人意料的是，一些大户开始停止提现，甚至重新充值。'如果连创始人都在赌，我们也愿意赌一把。'一位鲸鱼用户在推特上写道。但这只是暂缓，你仍需在24小时内找到长期解决方案。",
+        "choices": [
+          {
+            "text": "推出平台币激励计划",
+            "effects": ["+Money 5000", "+Reputation 20", "set platform_token_success=true"],
+            "next_beat": 12
+          },
+          {
+            "text": "与传统银行达成授信协议",
+            "effects": ["+Money 8000", "-Reputation 5", "set tradfi_partnership=true"],
+            "next_beat": 13
+          }
+        ]
       }
     ],
-    "long_term_status": ["fugitive", "lawsuit", "blacklisted", "seized_assets"],
-    "screenshot_hook": "从180亿日交易量到32亿资金冻结的48小时崩塌"
+    "long_term_status": {
+      "exit_acquired": "公司被收购，用户得救但你失去了控制权",
+      "platform_token_success": "平台币计划成功，度过危机并更强大",
+      "tradfi_partnership": "与传统金融合作，进入主流金融圈",
+      "defiant": "坚持独立但最终破产，成为加密历史的一页",
+      "cautionary_tale": "成为DeFi教科书的失败案例"
+    },
+    "screenshot_hook": {
+      "trigger": "储备金证明发布/融资成功",
+      "caption": "{COMPANY}48小时危机解除，用户资金100%安全",
+      "visual": "链上数据大屏，提现恢复公告"
+    }
   },
   {
-    "chain_id": "CHAIN_13",
-    "chain_name": "10B收购攻防",
-    "route_tags": ["创业","白领"],
-    "boom_metrics": [
-      {"k": "hostile_bid_usd", "v": 12000000000},
-      {"k": "poison_pill_dilution", "v": 85},
-      {"k": "defense_costs_usd", "v": 480000000},
-      {"k": "white_knight_premium", "v": 28}
+    "id": "CHAIN_13",
+    "title": "10B收购攻防",
+    "category": "tech",
+    "headlines": [
+      "{COMPANY}董事会收到120亿美元敌意收购要约，溢价35%",
+      "{CITY}科技巨头{COMPANY}启动毒丸计划抵御收购，股价单日暴涨22%"
     ],
-    "headlines": {
-      "headline_success": "{CITY} — {COMPANY} fends off $12B hostile bid with poison pill, white knight emerges at $15.4B valuation, shareholders gain 28% premium",
-      "headline_failure": "{CITY} — {COMPANY} poison pill overturned by court, $12B hostile takeover succeeds, CEO ousted, 4,700 jobs cut in restructuring"
+    "boom_metrics": {
+      "hostile_bid_usd": 12000000000,
+      "premium_pct": 35,
+      "poison_pill_dilution_pct": 50,
+      "shareholder_support_pct": 42,
+      "breakup_fee_usd": 480000000
     },
     "beats": [
       {
-        "beat_id": "B1",
-        "beat_type": "前置",
-        "text": "你花了15年把这家公司从车库做到纳斯达克。市值80亿美元，拥有3000项专利。然后一封13D文件出现在SEC网站上：激进基金Acacia Partners已建仓19%。"
-      },
-      {
-        "beat_id": "B2",
-        "beat_type": "上升",
-        "text": "Acacia公开发出120亿美元收购要约，溢价35%。董事会紧急会议开到凌晨三点，投行高盛建议接受：'这是历史高位。'"
-      },
-      {
-        "beat_id": "B3",
-        "beat_type": "爆发前夜",
-        "text": "你拒绝了要约。第二天股价暴涨18%，机构股东开始施压：'要么接受溢价，要么滚蛋。'你的投票权只有12%。"
-      },
-      {
-        "beat_id": "B4",
-        "beat_type": "分支选择",
-        "text": "你的法律顾问提出两个防御方案：启动毒丸计划稀释Acacia股权，或者寻找白衣骑士。前者可能引发诉讼，后者意味着失去控制权。",
-        "choice_point": true,
+        "beat_id": 1,
+        "title": "董事会桌上的要约",
+        "text": "早上9点，你收到了一封来自行业最大竞争对手的收购要约：120亿美元，全现金，溢价35%。你的CFO计算后告诉你，这个价格比你预期的IPO估值还要高20%。但对方是出了名的'收购杀手'，过去三家被收购的公司都在两年内被拆解。",
         "choices": [
           {
-            "choice_text": "启动毒丸计划：任何持股超20%的股东将以85%折扣获得新股",
-            "immediate_effects": "+Risk 30, +Stress 40, set poison_pill=True, +Legal_Cost 80",
-            "next_beat": "B5A",
-            "stakes": "赌的是毒丸能吓退Acacia，但可能面临股东集体诉讼"
+            "text": "建议董事会拒绝，启动毒丸计划",
+            "effects": ["+Reputation 20", "-Money 0", "set poison_pill=true"],
+            "next_beat": 2
           },
           {
-            "choice_text": "寻找白衣骑士：接触微软和Adobe寻求友好收购",
-            "immediate_effects": "-Control 50, +Stress 25, set white_knight_hunt=True, +Reputation 15",
-            "next_beat": "B5B",
-            "stakes": "赌的是能找到更高报价，但可能沦为目标公司被卖来卖去"
+            "text": "建议进入友好谈判，争取更好条件",
+            "effects": ["+Reputation 10", "+Money 200", "set negotiation_mode=true"],
+            "next_beat": 3
+          },
+          {
+            "text": "建议接受要约，股东利益最大化",
+            "effects": ["-Reputation 15", "+Money 120000", "set acquisition_accepted=true"],
+            "next_beat": 4
           }
         ]
       },
       {
-        "beat_id": "B5A",
-        "beat_type": "高潮",
-        "text": "Acacia起诉毒丸违法，德拉华州衡平法院受理。你的律师费烧掉了4.8亿美元。媒体称这是'公司治理的世纪之战'。"
+        "beat_id": 2,
+        "title": "毒丸计划生效",
+        "text": "毒丸计划宣布后，股价暴涨22%。收购方发布强硬声明，声称将发起代理权争夺战，直接争取股东支持。你的大股东之一——一家激进对冲基金——公开表示'愿意听取更高报价'。战斗才刚刚开始。",
+        "choices": [
+          {
+            "text": "寻找白衣骑士（友好收购方）",
+            "effects": ["+Money 500", "+Reputation 15", "set white_knight=true"],
+            "next_beat": 5
+          },
+          {
+            "text": "回购股票，提高收购成本",
+            "effects": ["-Money 2000", "+Shareholder_Value 20", "set buyback=true"],
+            "next_beat": 6
+          }
+        ]
       },
       {
-        "beat_id": "B5B",
-        "beat_type": "高潮",
-        "text": "微软开出154亿美元的报价，比Acacia高28%。但条件是你要留任CEO五年，并接受业绩对赌。"
+        "beat_id": 3,
+        "title": "谈判桌上的博弈",
+        "text": "双方在{CITY}的五星级酒店开始了秘密谈判。对方的CEO是个谈判高手，每一次让步都伴随着新的要求。最新的方案是135亿美元，但要求你在交易完成后留任3年——这意味着你无法立即套现离开。",
+        "choices": [
+          {
+            "text": "接受135亿方案，留任3年",
+            "effects": ["+Money 135000", "-Freedom 30", "set golden_handcuffs=true"],
+            "next_beat": 7
+          },
+          {
+            "text": "坚持140亿，可以留任2年",
+            "effects": ["+Money 140000", "-Freedom 20", "set hard_negotiator=true"],
+            "next_beat": 8
+          },
+          {
+            "text": "退出谈判，回到对抗模式",
+            "effects": ["-Reputation 10", "+Integrity 15", "set back_to_war=true"],
+            "next_beat": 2
+          }
+        ]
       },
       {
-        "beat_id": "B6",
-        "beat_type": "决战",
-        "text": "毒丸版：法官裁定毒丸合法但要求60天内重新投票。你飞遍全球路演争取机构股东支持。"
+        "beat_id": 5,
+        "title": "白衣骑士现身",
+        "text": "一家科技巨头对你的技术感兴趣，提出了150亿美元的友好收购方案——比敌意收购方高出25%。但他们的真实目的是获得你的核心技术专利，然后关闭你的业务线。你的员工们面临着失业风险。",
+        "choices": [
+          {
+            "text": "接受白衣骑士，保护股东利益",
+            "effects": ["+Money 150000", "-Employee_Loyalty 40", "set white_knight_accepted=true"],
+            "next_beat": 9
+          },
+          {
+            "text": "拒绝，继续独立运营",
+            "effects": ["+Reputation 30", "+Employee_Loyalty 30", "set independence_maintained=true"],
+            "next_beat": 10
+          }
+        ]
       },
       {
-        "beat_id": "B7",
-        "beat_type": "终局",
-        "text": "特别股东大会 voted against Acacia。白衣骑士微软入主，你保住了CEO位置但失去了创始人控制权。这是胜利还是失败？"
+        "beat_id": 6,
+        "title": "代理权争夺战",
+        "text": "敌意收购方直接向股东发出要约，绕过了董事会。他们承诺如果获得51%股权，将立即支付每股溢价50%。你的股东结构分散，机构投资者占了60%，他们只看回报。你需要在30天内说服足够多的股东支持你。",
+        "choices": [
+          {
+            "text": "发布五年战略计划，证明独立价值",
+            "effects": ["+Reputation 20", "+Shareholder_Support 15", "set long_term_vision=true"],
+            "next_beat": 11
+          },
+          {
+            "text": "提高分红承诺，短期利益绑定",
+            "effects": ["-Money 3000", "+Shareholder_Support 25", "set short_term_play=true"],
+            "next_beat": 12
+          }
+        ]
       }
     ],
-    "long_term_status": ["acquired", "golden_handcuffs", "burnout"],
-    "screenshot_hook": "创始人vs华尔街：120亿美元恶意收购的生死防守"
+    "long_term_status": {
+      "poison_pill": "成功抵御收购，但付出了高昂的防御成本",
+      "golden_handcuffs": "高价出售但失去自由，成为职业经理人的宿命",
+      "independence_maintained": "保持独立，成为反收购的经典案例",
+      "white_knight_accepted": "被'白衣骑士'收购，但业务被关闭",
+      "long_term_vision": "赢得股东支持，继续独立发展"
+    },
+    "screenshot_hook": {
+      "trigger": "毒丸计划宣布/收购成功",
+      "caption": "{COMPANY}毒丸计划生效，抵御120亿美元敌意收购",
+      "visual": "股价走势图，董事会公告截图"
+    }
   },
   {
-    "chain_id": "CHAIN_14",
-    "chain_name": "IPO前夜黑天鹅",
-    "route_tags": ["创业"],
-    "boom_metrics": [
-      {"k": "institutional_orders_usd", "v": 28000000000},
-      {"k": "target_valuation_usd", "v": 15000000000},
-      "short_interest_pct": 34,
-      {"k": "lockup_release_shares", "v": 85000000}
+    "id": "CHAIN_14",
+    "title": "IPO前夜黑天鹅",
+    "category": "tech",
+    "headlines": [
+      "{COMPANY}IPO获280亿美元认购，超额认购35倍",
+      "{CITY}独角兽{COMPANY}上市前遭遇做空攻击，估值缩水40%"
     ],
-    "headlines": {
-      "headline_success": "{CITY} — {COMPANY} IPO 34x oversubscribed, books close at $28B orders, pricing at $15B valuation top of range",
-      "headline_failure": "{CITY} — {COMPANY} pulls IPO after short-seller report triggers $8B order cancellations, valuation cut 60% in direct listing attempt"
+    "boom_metrics": {
+      "orders_usd": 28000000000,
+      "oversubscription_x": 35,
+      "valuation_cut_pct": 40,
+      "short_interest_pct": 18.5,
+      "lockup_shares_pct": 85
     },
     "beats": [
       {
-        "beat_id": "B1",
-        "beat_type": "前置",
-        "text": "路演第三周，摩根士丹利告诉你机构订单已经达到280亿美元，超额认购34倍。这是2024年最受期待的科技股IPO，你的估值目标150亿美元。"
-      },
-      {
-        "beat_id": "B2",
-        "beat_type": "上升",
-        "text": "定价前48小时，媒体开始炒作'下一个NVIDIA'。你的老股东包括软银和Coatue都在打电话来确认锁定期安排。"
-      },
-      {
-        "beat_id": "B3",
-        "beat_type": "爆发前夜",
-        "text": "做空机构Culper Research发布47页报告，指控你核心技术的专利归属存疑，并暗示收入确认有问题。股价预交易瞬间下跌12%。"
-      },
-      {
-        "beat_id": "B4",
-        "beat_type": "分支选择",
-        "text": "8亿美元订单被取消。你可以紧急降价40%完成IPO，或者推迟路演反击做空报告。前者稀释严重，后者可能彻底黄了。",
-        "choice_point": true,
+        "beat_id": 1,
+        "title": "认购狂潮",
+        "text": "路演结束，你的IPO获得了280亿美元的认购意向，超额认购35倍。投行建议你提高发行价区间，从原来的25-28美元上调到32-35美元。这将使公司多募集15亿美元，但也意味着更高的期望和更大的下跌风险。",
         "choices": [
           {
-            "choice_text": "降价紧急上市：估值砍到90亿，先拿钱再说",
-            "immediate_effects": "+Money 1200, -Ownership 15, set distressed_ipo=True, +Stress 35",
-            "next_beat": "B5A",
-            "stakes": "赌的是上市后能用业绩反击，但可能成为'流血上市'典型案例"
+            "text": "接受上调建议，最大化募资",
+            "effects": ["+Money 15000", "+Risk 30", "set aggressive_pricing=true"],
+            "next_beat": 2
           },
           {
-            "choice_text": "推迟IPO反击：聘请律所起诉Culper，证明清白后再上",
-            "immediate_effects": "-Money 200, +Stress 50, set ipo_delayed=True, +Risk 40",
-            "next_beat": "B5B",
-            "stakes": "赌的是能在现金耗尽前反击成功，否则公司可能破产"
+            "text": "维持原价区间，留上涨空间",
+            "effects": ["+Money 0", "-Risk 10", "+Investor_Goodwill 20", "set conservative_pricing=true"],
+            "next_beat": 3
           }
         ]
       },
       {
-        "beat_id": "B5A",
-        "beat_type": "高潮",
-        "text": "流血上市成功，但首日破发23%。媒体 headline：'泡沫破裂'。老股东愤怒，董事会质疑你的判断。"
+        "beat_id": 2,
+        "title": "做空报告来袭",
+        "text": "IPO定价公布后的当晚，一家知名做空机构发布了68页的做空报告。核心指控：你的用户增长数据存在'会计创新'，实际获客成本是披露数字的3倍，核心技术来自未披露的第三方授权。报告发布后，机构投资者开始撤单。",
+        "choices": [
+          {
+            "text": "立即发布详细回应，逐条反驳",
+            "effects": ["+Reputation 15", "-Money 100", "set detailed_response=true"],
+            "next_beat": 4
+          },
+          {
+            "text": "简化回应，强调长期价值",
+            "effects": ["+Reputation 5", "-Money 0", "set deflection_strategy=true"],
+            "next_beat": 5
+          },
+          {
+            "text": "推迟IPO，彻底调查指控",
+            "effects": ["-Reputation 30", "-Money 2000", "+Integrity 30", "set ipo_delayed=true"],
+            "next_beat": 6
+          }
+        ]
       },
       {
-        "beat_id": "B5B",
-        "beat_type": "高潮",
-        "text": "律所调查证明Culper报告存在事实错误。但市场窗口已关，科技股整体下跌30%，你的IPO无限期推迟。"
+        "beat_id": 3,
+        "title": "低调上市",
+        "text": "保守定价策略让你的IPO首日开盘即上涨25%，投资者获利，舆论正面。但董事会的一些成员质疑你' leaving money on the table'——少募集了至少10亿美元。更大的问题是，做空机构依然在瞄准你，只是选择了更隐蔽的方式。",
+        "choices": [
+          {
+            "text": "加强投资者关系，主动出击",
+            "effects": ["+Reputation 20", "-Money 50", "set proactive_ir=true"],
+            "next_beat": 7
+          },
+          {
+            "text": "专注业务，用业绩说话",
+            "effects": ["+Tech 15", "+Business 20", "set execution_focus=true"],
+            "next_beat": 8
+          }
+        ]
       },
       {
-        "beat_id": "B6",
-        "beat_type": "代价",
-        "text": "降价版：上市第90天，8500万股解禁，股价再跌40%。你从准亿万富翁变成'市值蒸发百亿的男人'。"
+        "beat_id": 4,
+        "title": "回应大战",
+        "text": "你的详细回应引发了新一轮辩论。做空机构发布了第二份报告，声称发现了更多'证据'。现在舆论分为两派：一派相信你是下一个安然，另一派认为你在被恶意攻击。股价（如果是已上市）或认购意向剧烈波动。",
+        "choices": [
+          {
+            "text": "起诉做空机构诽谤",
+            "effects": ["-Money 500", "+Reputation 10", "set legal_action=true"],
+            "next_beat": 9
+          },
+          {
+            "text": "邀请四大审计重新审计",
+            "effects": ["-Money 800", "+Reputation 25", "+Integrity 20", "set re_audit=true"],
+            "next_beat": 10
+          }
+        ]
       },
       {
-        "beat_id": "B7",
-        "beat_type": "终局",
-        "text": "推迟版：18个月后你以直接上市方式登陆纽交所，估值只剩60亿美元。280亿美元的订单盛况不再，但你活下来了。"
+        "beat_id": 6,
+        "title": "推迟的后果",
+        "text": "推迟IPO的决定被视为'心虚'的表现。三家机构投资者公开质疑你的透明度。更糟糕的是，市场环境开始转向——科技股整体下跌，你的窗口期正在关闭。你需要至少6个月才能重新申请上市。",
+        "choices": [
+          {
+            "text": "寻求私募融资替代",
+            "effects": ["+Money 5000", "-Equity 10", "set private_round=true"],
+            "next_beat": 11
+          },
+          {
+            "text": "准备被收购退出",
+            "effects": ["+Money 80000", "-Position CEO", "set acquisition_exit=true"],
+            "next_beat": 12
+          }
+        ]
       }
     ],
-    "long_term_status": ["public_company", "shareholder_lawsuit", "burnout"],
-    "screenshot_hook": "280亿美元订单到流血上市的48小时惊魂"
+    "long_term_status": {
+      "aggressive_pricing": "高价上市但承压，成为做空目标",
+      "conservative_pricing": "稳健上市，长期赢得投资者信任",
+      "re_audit": "透明策略赢得尊重，彻底洗清质疑",
+      "legal_action": "与做空机构缠斗，分散业务精力",
+      "private_round": "私有化路径，避开公开市场 scrutiny"
+    },
+    "screenshot_hook": {
+      "trigger": "IPO定价公布/首日开盘",
+      "caption": "{COMPANY}IPO获280亿美元认购，超额35倍",
+      "visual": "认购数据大屏，路演现场照片"
+    }
   },
   {
-    "chain_id": "CHAIN_15",
-    "chain_name": "新能源供应链锂矿豪赌",
-    "route_tags": ["创业","EV"],
-    "boom_metrics": [
-      {"k": "lithium_price_peak_ton", "v": 80000},
-      {"k": "lithium_price_crash_ton", "v": 12000},
-      {"k": "mine_acquisition_usd", "v": 420000000},
-      {"k": "contract_penalty_usd", "v": 180000000}
+    "id": "CHAIN_15",
+    "title": "新能源供应链锂矿豪赌",
+    "category": "tech",
+    "headlines": [
+      "{COMPANY}锁定南美锂矿10年供应，锁定价格8万美元/吨",
+      "锂价暴跌至1.2万美元，{CITY}新能源巨头{COMPANY}面临32亿美元减值"
     ],
-    "headlines": {
-      "headline_success": "{REGION} — {COMPANY} secures 20-year lithium supply at $12K/t, rivals pay $80K spot price, gross margin expands 890bps",
-      "headline_failure": "{REGION} — {COMPANY} stuck with $420M lithium mine as prices crash to $12K/t, $180M offtake penalties threaten solvency"
+    "boom_metrics": {
+      "locked_price_usd": 80000,
+      "spot_price_usd": 12000,
+      "contract_volume_tons": 150000,
+      "impairment_risk_usd": 3200000000,
+      "contract_years": 10
     },
     "beats": [
       {
-        "beat_id": "B1",
-        "beat_type": "前置",
-        "text": "2022年锂价涨到8万美元一吨，宁德时代说你再不给钱就别想拿电池。你算了一笔账：如果能锁定20年锂矿，电池成本能降低40%。"
-      },
-      {
-        "beat_id": "B2",
-        "beat_type": "上升",
-        "text": "阿根廷萨尔塔省的锂盐湖项目出售，储量足够供应500万辆电动车。开价42亿美元，但需要承担18亿美元的包销违约风险。"
-      },
-      {
-        "beat_id": "B3",
-        "beat_type": "爆发前夜",
-        "text": "董事会7票反对，认为EV需求可能不及预期。你引用马斯克的话：'锂就是新的石油'，强推收购案通过。"
-      },
-      {
-        "beat_id": "B4",
-        "beat_type": "分支选择",
-        "text": "签约前一周，澳洲Pilbara拍卖价开始下跌。你可以选择执行合同锁定20年供应，或者观望等待锂价继续下跌。",
-        "choice_point": true,
+        "beat_id": 1,
+        "title": "锂矿锁定协议",
+        "text": "南美锂三角的一处世界级锂矿正在招标。你的供应链团队计算出：以8万美元/吨锁定10年供应，可以确保未来新能源汽车产能不受原材料波动影响。但 CFO 警告你，这个价格比当前现货价高出300%，如果锂价下跌，公司将面临巨大账面损失。",
         "choices": [
           {
-            "choice_text": "豪赌锁定：签约20年长协，不管短期价格波动",
-            "immediate_effects": "-Money 4200, +Asset 5000, set long_contract=True, +Stress 30",
-            "next_beat": "B5A",
-            "stakes": "赌的是锂价长期上涨，如果下跌将背负巨额库存减值"
+            "text": "全押，锁定全部需求",
+            "effects": ["-Money 12000", "+Supply_Security 50", "+Risk 40", "set full_lock=true"],
+            "next_beat": 2
           },
           {
-            "choice_text": "灵活观望：只签5年短约，保留价格下行空间",
-            "immediate_effects": "-Money 1200, +Risk 25, set short_contract=True, +Stress 20",
-            "next_beat": "B5B",
-            "stakes": "赌的是锂价下跌但5年后供应可能再次紧张，届时议价权丧失"
+            "text": "半仓，锁定50%需求",
+            "effects": ["-Money 6000", "+Supply_Security 25", "+Risk 20", "set partial_lock=true"],
+            "next_beat": 3
+          },
+          {
+            "text": "放弃，保持灵活采购",
+            "effects": ["-Money 0", "-Supply_Security 20", "+Cash 30", "set spot_strategy=true"],
+            "next_beat": 4
           }
         ]
       },
       {
-        "beat_id": "B5A",
-        "beat_type": "高潮",
-        "text": "签约后8个月，锂价从8万暴跌到1.2万美元。你的财务报表上42亿资产瞬间减值到7亿。股东要求你辞职谢罪。"
+        "beat_id": 2,
+        "title": "锂价雪崩",
+        "text": "签约后18个月，锂价从历史高点暴跌85%，至1.2万美元/吨。你的长期合同价格现在是市场价的6.7倍。竞争对手用现货采购，电池成本比你低40%。董事会要求你解释这个'史诗级的错误'。",
+        "choices": [
+          {
+            "text": "坚持履约，维护供应商关系",
+            "effects": ["-Money 0", "+Reputation 20", "+Integrity 25", "-Stock_Price 25", "set honor_contract=true"],
+            "next_beat": 5
+          },
+          {
+            "text": "重新谈判合同条款",
+            "effects": ["-Reputation 15", "+Money 4000", "set renegotiation=true"],
+            "next_beat": 6
+          },
+          {
+            "text": "寻求违约，支付罚金退出",
+            "effects": ["-Reputation 30", "-Integrity 25", "-Money 2000", "set contract_breach=true"],
+            "next_beat": 7
+          }
+        ]
       },
       {
-        "beat_id": "B5B",
-        "beat_type": "高潮",
-        "text": "短约让你躲过了暴跌，但5年期满后锂价反弹到6万。供应商集体涨价，你的电池成本比对手高30%，市场份额暴跌。"
+        "beat_id": 3,
+        "title": "半仓的缓冲",
+        "text": "半仓策略为你提供了一定的缓冲。虽然50%的锁定合同依然亏损严重，但你可以用现货市场补充另一半需求，总体成本仍然可控。但这只是一个喘息机会，锂价预测显示低迷可能持续3-5年。",
+        "choices": [
+          {
+            "text": "逢低补仓，摊薄平均成本",
+            "effects": ["-Money 3000", "+Supply_Security 20", "set averaging_down=true"],
+            "next_beat": 8
+          },
+          {
+            "text": "专注内部电池技术创新",
+            "effects": ["-Money 2000", "+Tech 30", "+Battery_Efficiency 25", "set tech_focus=true"],
+            "next_beat": 9
+          }
+        ]
       },
       {
-        "beat_id": "B6",
-        "beat_type": "代价",
-        "text": "长协版：18亿美元包销违约罚款到期，你被迫发行可转债稀释30%股权。竞争对手BYD抄底收购了你的矿。"
-      },
-      {
-        "beat_id": "B7",
-        "beat_type": "终局",
-        "text": "短约版：失去供应链优势后，你的EV销量从行业前三跌到边缘品牌。那个豪赌长协的对手反而因为锁定低价活下来并成为新龙头。"
+        "beat_id": 4,
+        "title": "灵活策略的双刃剑",
+        "text": "放弃锁定的决定最初被视为明智——锂价确实下跌了。但现在市场开始回暖，竞争对手凭借长期合同锁定了低成本供应，而你面临现货价格上涨的压力。同时，主要锂矿商优先供货给长期合作伙伴，你的采购优先级下降。",
+        "choices": [
+          {
+            "text": "现在入场，锁定未来5年",
+            "effects": ["-Money 4000", "+Supply_Security 30", "set late_lock=true"],
+            "next_beat": 10
+          },
+          {
+            "text": "继续灵活，押注锂回收技术",
+            "effects": ["-Money 3000", "+Tech 25", "+Sustainability 30", "set recycling_bet=true"],
+            "next_beat": 11
+          }
+        ]
       }
     ],
-    "long_term_status": ["diluted", "supply_chain_captive", "turnaround_ceo"],
-    "screenshot_hook": "从8万到1万2：锂矿豪赌的生死一念"
+    "long_term_status": {
+      "honor_contract": "虽然短期财务承压，但赢得了供应链伙伴的长期信任",
+      "renegotiation": "成功重新谈判，但供应商关系受损",
+      "contract_breach": "违约退出，声誉受损但止损",
+      "tech_focus": "技术突破降低对锂的依赖，成为行业标杆",
+      "recycling_bet": "锂回收技术成功，成为循环经济典范"
+    },
+    "screenshot_hook": {
+      "trigger": "锂矿签约/价格暴跌",
+      "caption": "{COMPANY}锂矿豪赌：从8万到1.2万美元的价格过山车",
+      "visual": "锂价走势图，长期合同文件"
+    }
   },
   {
-    "chain_id": "CHAIN_17",
-    "chain_name": "AI换脸深度伪造",
-    "route_tags": ["AI","创业"],
-    "boom_metrics": [
-      {"k": "viral_views", "v": 320000000},
-      {"k": "lawsuit_damages_usd", "v": 180000000},
-      {"k": "platform_revenue_usd", "v": 45000000},
-      {"k": "users_banned", "v": 2500000}
+    "id": "CHAIN_17",
+    "title": "AI换脸深度伪造",
+    "category": "tech",
+    "headlines": [
+      "{COMPANY}换脸APP病毒传播，单条视频播放量破3.2亿",
+      "深度伪造技术引发隐私诉讼，{CITY}创业公司{COMPANY}面临1.8亿美元赔偿"
     ],
-    "headlines": {
-      "headline_success": "{CITY} — {COMPANY} reaches $45M ARR on AI face-swap tech, 320M views drive viral growth, content moderation investment hits $12M annually",
-      "headline_failure": "{CITY} — {COMPANY} sued for $180M over non-consensual deepfakes, app stores remove platform after 2.5M accounts flagged"
+    "boom_metrics": {
+      "peak_video_views": 320000000,
+      "lawsuit_amount_usd": 180000000,
+      "daily_active_users_millions": 45,
+      "content_moderation_cost_usd": 12000000,
+      "regulatory_fines_usd": 25000000
     },
     "beats": [
       {
-        "beat_id": "B1",
-        "beat_type": "前置",
-        "text": "你的AI换脸App上线三个月，用户把自己换进电影片段 viral 到3.2亿次播放。广告收入滚雪球，月收入突破400万美元。"
-      },
-      {
-        "beat_id": "B2",
-        "beat_type": "上升",
-        "text": "A轮1500万美元到账，估值冲到1.2亿。红杉说：'这是TikTok级别的传播引擎。'你开始规划B轮和全球化。"
-      },
-      {
-        "beat_id": "B3",
-        "beat_type": "爆发前夜",
-        "text": " moderation 团队报告：15%的内容涉及非自愿换脸， mostly targeting女性名人。法务警告这可能构成诽谤和隐私侵权。"
-      },
-      {
-        "beat_id": "B4",
-        "beat_type": "分支选择",
-        "text": "你可以重金投入AI审核限制功能，但这会杀死增长；或者放任自流，赌在出事前完成B轮退出。",
-        "choice_point": true,
+        "beat_id": 1,
+        "title": "爆款一夜",
+        "text": "你的AI换脸APP突然爆了。一个用户使用你的技术把某位顶流明星'植入'到经典电影中，视频播放量突破3.2亿。App Store排名从第500位飙升至第1位，日活用户突破4500万。服务器成本飙升，但广告收入也开始疯狂涌入。",
         "choices": [
           {
-            "choice_text": "严格审核：投入1200万建立AI+人工审核，限制换脸功能",
-            "immediate_effects": "-Money 120, -Growth 40, set moderation_heavy=True, +Reputation 20",
-            "next_beat": "B5A",
-            "stakes": "赌的是合规能换来长期价值，但增长放缓可能让投资人失去兴趣"
+            "text": "加速扩张，增加服务器投入",
+            "effects": ["-Money 3000", "+Users 40", "+Revenue 2000", "set aggressive_growth=true"],
+            "next_beat": 2
           },
           {
-            "choice_text": "增长优先：只做最低限度合规，全力冲刺B轮",
-            "immediate_effects": "+Money 0, +Growth 60, set growth_at_all_costs=True, +Risk 50",
-            "next_beat": "B5B",
-            "stakes": "赌的是能在监管铁拳落下前完成退出，否则就是刑事责任"
+            "text": "暂停新用户注册，先完善审核",
+            "effects": ["-Users 10", "+Reputation 15", "+Integrity 20", "set responsible_pause=true"],
+            "next_beat": 3
+          },
+          {
+            "text": "启动付费墙，商业变现优先",
+            "effects": ["+Revenue 3000", "-Users 20", "+Money 2500", "set monetization_first=true"],
+            "next_beat": 4
           }
         ]
       },
       {
-        "beat_id": "B5A",
-        "beat_type": "高潮",
-        "text": "审核严格化后用户增长放缓60%，但App Store维持了评级。你开始靠企业服务（影视制作工具）转型，收入多元化。"
+        "beat_id": 2,
+        "title": "审核失控",
+        "text": "用户增长太快，内容审核系统完全跟不上。平台上开始出现未经同意的换脸视频——普通人被换到色情内容中，政治人物被伪造发表不当言论。一位知名女演员在推特上晒出律师函，准备起诉你和你的公司。",
+        "choices": [
+          {
+            "text": "立即下线相关功能，配合调查",
+            "effects": ["-Users 30", "+Integrity 25", "-Revenue 1500", "set feature_shutdown=true"],
+            "next_beat": 5
+          },
+          {
+            "text": "加强审核但不关闭功能",
+            "effects": ["-Money 800", "-Users 10", "set enhanced_moderation=true"],
+            "next_beat": 6
+          }
+        ]
       },
       {
-        "beat_id": "B5B",
-        "beat_type": "高潮",
-        "text": "放任策略奏效，DAU再涨300%。但一位女星的律师团队发来诉状：非自愿换脸视频播放量2亿，索赔1.8亿美元。"
+        "beat_id": 3,
+        "title": "负责任的代价",
+        "text": "暂停新用户注册的决定让你的竞争对手趁机抢占市场。投资者质疑你的'保守'策略，认为你错过了窗口期。但负面新闻确实减少了，而且你开始吸引那些重视隐私的品牌广告商。",
+        "choices": [
+          {
+            "text": "推出'Consent Verified'功能",
+            "effects": ["+Reputation 30", "-Money 500", "+User_Trust 25", "set consent_system=true"],
+            "next_beat": 7
+          },
+          {
+            "text": "重新开放注册，追赶增长",
+            "effects": ["+Users 25", "-Reputation 10", "set back_to_growth=true"],
+            "next_beat": 8
+          }
+        ]
       },
       {
-        "beat_id": "B6",
-        "beat_type": "崩塌",
-        "text": "放任版：诉讼引发连锁反应，250万账号因违规内容被批量封禁。苹果和谷歌同时下架你的App。"
+        "beat_id": 5,
+        "title": "1.8亿美元诉讼",
+        "text": "女演员的诉讼正式提起，索赔1.8亿美元——包括精神损失、名誉损害和惩罚性赔偿。同时，集体诉讼也开始形成，代表所有未经同意被换脸的用户。你的律师团队评估后认为，败诉概率高达70%。",
+        "choices": [
+          {
+            "text": "寻求和解，支付5000万美元",
+            "effects": ["-Money 5000", "-Reputation 15", "set settlement=true"],
+            "next_beat": 9
+          },
+          {
+            "text": "坚决应诉，捍卫技术中立",
+            "effects": ["-Money 2000", "+Reputation 10", "+Integrity 10", "+Stress 50", "set fight_in_court=true"],
+            "next_beat": 10
+          }
+        ]
       },
       {
-        "beat_id": "B7",
-        "beat_type": "终局",
-        "text": "审核版：虽然错过了 viral 红利，但你活下来了。B轮以3亿估值完成，投资人看重的是你的合规能力。那个放任增长的竞品已经消失。"
+        "beat_id": 7,
+        "title": "Consent Verified的成功",
+        "text": "'Consent Verified'功能获得了意想不到的成功。用户需要视频上传者和被换脸者双重确认才能发布，这大大降低了滥用风险。更重要的是，这个功能让你获得了与好莱坞和音乐产业的合作机会——他们看到了你的技术用于合法娱乐的潜力。",
+        "choices": [
+          {
+            "text": "与好莱坞 studios 签署授权协议",
+            "effects": ["+Money 8000", "+Reputation 40", "set hollywood_partnership=true"],
+            "next_bbeat": 11
+          },
+          {
+            "text": "开发B2B企业级换脸解决方案",
+            "effects": ["+Money 5000", "+Business 30", "set b2b_pivot=true"],
+            "next_beat": 12
+          }
+        ]
       }
     ],
-    "long_term_status": ["lawsuit", "platform_banned", "pivot_to_enterprise"],
-    "screenshot_hook": "3.2亿次播放到1.8亿诉讼：AI换脸的道德悬崖"
+    "long_term_status": {
+      "consent_system": "成为负责任AI的标杆，获得监管认可",
+      "hollywood_partnership": "与娱乐产业深度合作，开辟合法商业路径",
+      "settlement": "花钱消灾，但开创危险先例",
+      "fight_in_court": "法律战旷日持久，业务元气大伤",
+      "b2b_pivot": "成功转型企业级服务，避开C端争议"
+    },
+    "screenshot_hook": {
+      "trigger": "爆款视频/Consent Verified上线",
+      "caption": "{COMPANY}换脸APP单条视频3.2亿播放，技术双刃剑引发全球讨论",
+      "visual": "App Store #1 排名，病毒视频播放数据"
+    }
   }
 ]
