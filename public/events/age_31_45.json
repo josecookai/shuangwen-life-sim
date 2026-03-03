@@ -1,0 +1,102 @@
+[
+  {
+    "id": "D01",
+    "title": "A轮融资2000万到账，公司估值1亿",
+    "rarity": "EPIC",
+    "age_range": [31, 45],
+    "route_tags": ["startup"],
+    "base_weight": 10,
+    "requirements": "investor_backing=true",
+    "intro": "激动的时刻终于到来了！A轮融资成功，2000万资金到账，公司估值一瞬间上升到1亿。办公室里欢声笑语，团队的每个人都为这个里程碑激动不已。融资协议的签署意味着公司即将步入新的发展阶段，更大的机会和挑战也随之而来。",
+    "choices": [
+      {
+        "choice_text": "立即扩团队并加快产品迭代",
+        "outcome_text": "融资款到位后，公司迅速招聘扩展，产品功能也快速迭代。虽然压力增大，但项目进展飞速，融资的价值被充分释放。",
+        "effects": ["+Money 2000", "+Stress 20"],
+        "next_event_ids": ["C03"]
+      }
+    ],
+    "death_risk": 0,
+    "notes": "传播点"
+  },
+  {
+    "id": "D02",
+    "title": "IPO后遭税务稽查，欠税8000万",
+    "rarity": "LEGENDARY",
+    "age_range": [31, 45],
+    "route_tags": ["startup"],
+    "base_weight": 10,
+    "requirements": "ipo_locked=true",
+    "intro": "IPO的荣耀还未褪去，突然一纸通知书打破了所有的欢庆。税务部门对公司财务进行了彻底稽查，查出历年存在严重的税务合规问题。天文数字的欠税金额足以击垮任何创业者的心理防线。这次打击比任何市场波动都来得凶猛，创业梦瞬间变成了诉讼噩梦。",
+    "choices": [
+      {
+        "choice_text": "召集律师团队全力应对",
+        "outcome_text": "雇佣顶级税务律师团队，投入巨资应诉。案件将历时数年，每一次开庭都是心理煎熬，资金流血不止。",
+        "effects": ["-Money 8000", "+Debt 3000", "+Stress 80", "set lawsuit=true"],
+        "next_event_ids": []
+      }
+    ],
+    "death_risk": 0,
+    "notes": "人生过山车截图"
+  },
+  {
+    "id": "D03",
+    "title": "被猎头挖角到{UNICORN_CO}，年薪从50万翻到300万",
+    "rarity": "EPIC",
+    "age_range": [31, 45],
+    "route_tags": ["office"],
+    "base_weight": 10,
+    "requirements": "",
+    "intro": "一通来自知名独角兽公司的猎头电话改变了你的职业轨迹。他们看中了你多年的行业经验和管理能力，开出了令人瞠目的薪资条件——年薪从50万直接翻到300万，还有期权和签字费。这是无数打工人梦寐以求的机会，一纸offer书承载了职业生涯的华丽转身。",
+    "choices": [
+      {
+        "choice_text": "欣然接受，开启新的职业篇章",
+        "outcome_text": "加入独角兽公司，进入高层管理圈子。薪资大幅提升，但管理压力和工作强度也随之增加。新的平台带来新的机遇与挑战。",
+        "effects": ["+Money 250", "+Happiness 20", "+Stress 20"],
+        "next_event_ids": []
+      }
+    ],
+    "death_risk": 0,
+    "notes": "打工人逆袭"
+  },
+  {
+    "id": "D04",
+    "title": "35岁被裁员，N+6补偿，中年危机袭来",
+    "rarity": "RARE",
+    "age_range": [31, 45],
+    "route_tags": ["office"],
+    "base_weight": 10,
+    "requirements": "Stress>=60",
+    "intro": "收到人力资源部的通知时，你整个人都僵住了。公司因为战略调整决定裁员，作为中层管理被列入名单。虽然获得了N+6的补偿，但这突如其来的打击让你陷入了深深的自我怀疑。35岁的年纪，被认为既不年轻也不够成熟，重新找工作会有多难？中年职场恐惧瞬间吞没了你。",
+    "choices": [
+      {
+        "choice_text": "积极寻找新工作，重振旗鼓",
+        "outcome_text": "利用补偿金维持生活，开始密集地求职。虽然找到工作，但新公司薪资和职位都有所下降，打击感在心中久久难散。",
+        "effects": ["-Money 50", "-Happiness 30", "+Risk 20"],
+        "next_event_ids": []
+      }
+    ],
+    "death_risk": 0,
+    "notes": "35岁职场恐惧"
+  },
+  {
+    "id": "D05",
+    "title": "在公司假装生病被监控录像抓包，视频被同事发到全公司群",
+    "rarity": "MEME",
+    "age_range": [31, 45],
+    "route_tags": ["universal"],
+    "base_weight": 10,
+    "requirements": "",
+    "intro": "你向公司请了病假，说自己病得很严重，需要在家休息。但下午的时候，被同事无意中在社交媒体看到了你精神焕发地在商场逛街、试衣服的监控录像。这段视频如野火般蔓延，很快就被转发到了整个公司的内部群聊。你的谎言在众人眼前彻底暴露，职场社死的怪圈瞬间形成。",
+    "choices": [
+      {
+        "choice_text": "鼓起勇气坦诚道歉",
+        "outcome_text": "在公司全员面前承认错误，向同事和上司道歉。虽然当众认错让人尴尬，但诚恳的态度获得了部分同事的理解，信任度却一去不复返。",
+        "effects": ["-Reputation 20", "+Stress 30"],
+        "next_event_ids": []
+      }
+    ],
+    "death_risk": 0,
+    "notes": "职场社死现场"
+  }
+]

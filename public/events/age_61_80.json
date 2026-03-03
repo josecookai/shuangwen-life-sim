@@ -1,0 +1,102 @@
+[
+  {
+    "id": "F01",
+    "title": "退休第一天",
+    "rarity": "COMMON",
+    "age_range": [61, 80],
+    "route_tags": ["universal"],
+    "base_weight": 10,
+    "requirements": "",
+    "intro": "退休第一天，不知道该干什么，在小区广场站了两小时。周围是熙攘的人群，孩子们在玩耍，老人们在下棋。你曾经每天早上7点起床赶班车的生活，现在突然停止了。时间变得无比漫长，没有会议、没有deadline、没有人需要你的工作。这种失落感涌上心头。",
+    "choices": [
+      {
+        "choice_text": "回家，躺在沙发上睡一整天",
+        "outcome_text": "你睡了16小时，醒来时天已黑。家里很安静，只有自己的呼吸声。这种静谧让你有些害怕。",
+        "effects": ["-Stress 20", "-Skill 5", "+Happiness 10"],
+        "next_event_ids": []
+      }
+    ],
+    "death_risk": 0,
+    "notes": "退休失落感共鸣"
+  },
+  {
+    "id": "F02",
+    "title": "78岁重新创业",
+    "rarity": "LEGENDARY",
+    "age_range": [61, 80],
+    "route_tags": ["universal"],
+    "base_weight": 3,
+    "requirements": "Risk>=80 AND Skill>=70",
+    "intro": "78岁那年，你突然想起年轻时的梦想。一个跨越60年的念头重新燃起——创办自己的公司。朋友们都劝你放弃，说这个年纪应该享受生活，但你决定赌一把。你用毕生的积蓄和经验，创办了一家科技公司。两年的奋斗，无数的失眠，年轻员工的怀疑和不信任，你都熬过来了。80岁那天，公司在纳斯达克敲钟上市。全场起立鼓掌，镜头对准了你苍白的发丝和坚定的眼神。",
+    "choices": [
+      {
+        "choice_text": "享受这一刻的荣光",
+        "outcome_text": "你站在交易所的讲台上，敲响了上市的钟声。这声钟声，是你为人生的最后一次豪赌的奖励。",
+        "effects": ["+Money 3000", "+Reputation 50", "+Impact 40"],
+        "next_event_ids": []
+      }
+    ],
+    "death_risk": 0,
+    "notes": "最励志截图：永远不晚"
+  },
+  {
+    "id": "F03",
+    "title": "写回忆录获茅盾文学奖提名",
+    "rarity": "EPIC",
+    "age_range": [61, 80],
+    "route_tags": ["universal"],
+    "base_weight": 5,
+    "requirements": "Reputation>=50",
+    "intro": "66岁那年，你开始写回忆录《我的荒诞一生》。每天坐在书房里，翻出尘埃落定的日记和泛黄的照片，用笔记录下那些被遗忘的时刻。你写了与命运的对抗，写了失败和成功交织的人生，写了那些既荒唐又真挚的往事。三年后，这部150万字的回忆录出版了。评论家们说这是一部'见证时代、见证人性'的杰作。第二年，它获得了茅盾文学奖的提名。",
+    "choices": [
+      {
+        "choice_text": "在获奖典礼上发表感言",
+        "outcome_text": "你没有获奖，但提名本身已经是认可。你在典礼上哽咽着说：'这是我对自己人生的交代。'",
+        "effects": ["+Money 300", "+Reputation 40", "+Happiness 30"],
+        "next_event_ids": []
+      }
+    ],
+    "death_risk": 0,
+    "notes": "晚年封神"
+  },
+  {
+    "id": "F04",
+    "title": "被子女骗走毕生积蓄",
+    "rarity": "LEGENDARY",
+    "age_range": [61, 80],
+    "route_tags": ["universal"],
+    "base_weight": 3,
+    "requirements": "Money>=500 AND children=true",
+    "intro": "73岁那年，子女以需要钱创业、交学费、买房为名义，逐步掏空了你的积蓄。一开始是小额借用，你欣然同意——毕竟是自己的孩子。后来要得越来越多，你开始怀疑，但又不想相信自己的亲生骨肉会欺骗自己。当真相大白时，600万的存款已经所剩无几。子女以家庭为名义各执一词，推诿扯皮。而你，晚年陷入了经济困境，每天都在后悔中度过。",
+    "choices": [
+      {
+        "choice_text": "选择原谅，但心中永远有疤痕",
+        "outcome_text": "你告诉自己要放下，但每个失眠的夜晚，都在想这笔钱本该用来治疗疾病。晚年的凄凉感挥之不去。",
+        "effects": ["-Money 2000", "-Happiness 50", "+Stress 40"],
+        "next_event_ids": []
+      }
+    ],
+    "death_risk": 0,
+    "notes": "人性最黑暗的截图"
+  },
+  {
+    "id": "F05",
+    "title": "最终，人生落幕",
+    "rarity": "COMMON",
+    "age_range": [61, 80],
+    "route_tags": ["universal"],
+    "base_weight": 10,
+    "requirements": "",
+    "intro": "最终，在某个普通的下午，阳光透过窗户洒在你的脸上。你感到身体变得轻盈，呼吸变得悠长。一生的跌宕起伏、成败得失，都在这一刻化为平静。你闭上眼睛，带着对人生的诠释和对世界最后的温情，安静地离开了这个世界。",
+    "choices": [
+      {
+        "choice_text": "接受生命的终局",
+        "outcome_text": "你的故事结束了，但故事留在了每一个认识你的人的记忆里。",
+        "effects": ["+Happiness 20", "-Stress 100"],
+        "next_event_ids": []
+      }
+    ],
+    "death_risk": 1.0,
+    "notes": "终局事件，人生落幕"
+  }
+]

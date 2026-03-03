@@ -1,0 +1,102 @@
+[
+  {
+    "id": "C01",
+    "title": "毕业找工作，面了20家终于拿到offer",
+    "rarity": "COMMON",
+    "age_range": [19, 30],
+    "route_tags": ["universal"],
+    "base_weight": 10,
+    "requirements": "",
+    "intro": "大学四年终于落幕，你投了无数份简历，经历了无数次面试失败。第20家公司的面试官笑着说：欢迎加入我们。你紧张的心终于放松了，这是你职业生涯的第一步，但不知道它会通向何方。",
+    "choices": [
+      {
+        "choice_text": "欣然接受Offer，做好职场人的准备",
+        "outcome_text": "你成功踏入职场，新工作充满挑战。虽然压力很大，但这些经历让你快速成长。",
+        "effects": ["+Skill 10", "+Stress 20"],
+        "next_event_ids": []
+      }
+    ],
+    "death_risk": 0,
+    "notes": "职业生涯起点"
+  },
+  {
+    "id": "C02",
+    "title": "创业获得500万天使投资",
+    "rarity": "EPIC",
+    "age_range": [19, 30],
+    "route_tags": ["startup"],
+    "base_weight": 5,
+    "requirements": "startup=true",
+    "intro": "你的创业想法打动了投资者，一次咖啡馆的对话变成了投资意向书。经过三个月的谈判和尽职调查，你终于从投资机构的账户里收到了500万的转账。这笔钱就像一把钥匙，打开了创业梦想的大门。团队开始扩招，办公室搬到了更好的地方，前路充满了希望和风险。",
+    "choices": [
+      {
+        "choice_text": "全力投入创业，开始扩张计划",
+        "outcome_text": "融资成功为你的创业之路注入了强心剂。资金的充足让你能够大胆聘请顶级人才，但压力也随之增加。",
+        "effects": ["+Money 500", "+Stress 30", "set investor_backing=true"],
+        "next_event_ids": ["D01"]
+      }
+    ],
+    "death_risk": 0,
+    "notes": "创业融资关键时刻"
+  },
+  {
+    "id": "C03",
+    "title": "公司IPO！资产从50万暴增至8000万，但180天锁定期，记者堵门",
+    "rarity": "LEGENDARY",
+    "age_range": [19, 30],
+    "route_tags": ["startup"],
+    "base_weight": 2,
+    "requirements": "investor_backing=true AND Money>=200",
+    "intro": "敲钟的那一刻，你的股票价格一飞冲天。50万的初期投资现在值8000万。门外聚集了记者，各大媒体争相报道你的创业故事。你成了行业明星，但180天的锁定期意味着这些财富暂时还是纸面上的数字。每天睁眼看着账户里那个8的数字，你既兴奋又焦虑。",
+    "choices": [
+      {
+        "choice_text": "接受采访，享受聚光灯下的成功",
+        "outcome_text": "你的个人品牌价值急剧上升，但随之而来的是巨大的压力和期望。所有人都在看着你，期待你再创奇迹。",
+        "effects": ["+Money 7950", "+Reputation 50", "+Stress 50", "set ipo_locked=true"],
+        "next_event_ids": ["D02"]
+      }
+    ],
+    "death_risk": 0,
+    "notes": "人生巅峰截图时刻"
+  },
+  {
+    "id": "C04",
+    "title": "一条视频爆火破亿播放，粉丝从0到500万，品牌找上门",
+    "rarity": "LEGENDARY",
+    "age_range": [19, 30],
+    "route_tags": ["creator"],
+    "base_weight": 2,
+    "requirements": "",
+    "intro": "那条随手拍摄的短视频，出乎意料地突破了一亿播放。评论区里全是正面评价，你的粉丝数在24小时内从零暴增到500万。手机不停地响，各大品牌的商务经理都想和你合作。你成了平台上的当红炸子鸡，每一条新动态都能带来数百万的流量。这是创作者梦寐以求的时刻。",
+    "choices": [
+      {
+        "choice_text": "抓住风口，签署品牌代言合同",
+        "outcome_text": "品牌合作为你带来了可观的收入。但随着粉丝数的暴增，你也承受了巨大的舆论压力，每一条动态都可能被放大解读。",
+        "effects": ["+Reputation 60", "+Money 200", "+Stress 30", "set viral_hit=true"],
+        "next_event_ids": ["C05"]
+      }
+    ],
+    "death_risk": 0,
+    "notes": "爆火截图"
+  },
+  {
+    "id": "C05",
+    "title": "塌房！黑料曝光，品牌全解约，粉丝倒戈，损失2000万",
+    "rarity": "LEGENDARY",
+    "age_range": [19, 30],
+    "route_tags": ["creator"],
+    "base_weight": 2,
+    "requirements": "viral_hit=true",
+    "intro": "一个匿名账号扔出了几张聊天截图，指控你曾经的言论包含歧视性内容。在不到两小时的时间里，事件冲上了热搜。你曾经的拥趸现在变成了审判官，品牌方迅速宣布解约，代言费打了水漂。你从500万粉丝的顶级网红，一夜间沦为过街老鼠。这是从巅峰到谷底最快的跌落。",
+    "choices": [
+      {
+        "choice_text": "发布道歉声明，尝试重建形象",
+        "outcome_text": "道歉声明获得了部分理解，但舆论风暴已经造成了难以逆转的伤害。你失去了粉丝、金钱和声誉，重建之路漫长而艰难。",
+        "effects": ["-Reputation 70", "-Money 200", "-Happiness 50", "set blacklisted=true"],
+        "next_event_ids": []
+      }
+    ],
+    "death_risk": 0,
+    "notes": "从巅峰到谷底"
+  }
+]

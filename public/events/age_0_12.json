@@ -1,0 +1,82 @@
+[
+  {
+    "id": "A01",
+    "title": "妈妈说再玩手机就没收",
+    "rarity": "COMMON",
+    "age_range": [0, 12],
+    "route_tags": ["universal"],
+    "base_weight": 10,
+    "requirements": "",
+    "intro": "你正在沉迷手机游戏，突然妈妈出现在门口，双眼圆瞪。她用那种古老而有效的威胁方式说道：再玩下去就要没收了。这一刻，你意识到生命中最大的危机可能不是游戏里的怪物，而是现实中的家长。",
+    "choices": [
+      {"choice_text": "立即关掉手机，装作若无其事", "outcome_text": "妈妈满意地点点头，但你能感受到她眼神中的怀疑。你获得了宝贵的游戏时间。", "effects": ["+Skill 2"], "next_event_ids": []},
+      {"choice_text": "再玩五分钟，试试运气", "outcome_text": "妈妈真的生气了，手机被没收一周。但你成功通关了那个关卡，值吗？", "effects": ["-Happiness 15"], "next_event_ids": []}
+    ],
+    "death_risk": 0,
+    "notes": "童年必经之路，手机与家长的永恒战争"
+  },
+  {
+    "id": "A02",
+    "title": "老师发现你的秘密绰号本",
+    "rarity": "RARE",
+    "age_range": [0, 12],
+    "route_tags": ["universal"],
+    "base_weight": 6,
+    "requirements": "",
+    "intro": "你藏在课本里的笔记本被老师发现了。里面全是班级同学们的创意绰号：\"数学废柴王\"、\"英语口音哥\"、\"体育卡壳姐\"。你的艺术细胞和毒舌才能同时暴露在讲台上。全班集体沉默，气氛微妙。",
+    "choices": [
+      {"choice_text": "坦白认错，声称这只是童年无知的恶作剧", "outcome_text": "老师给了你一番教育，但同学们找到了共同话题。你意外地获得了\"幽默担当\"的地位。", "effects": ["+Charm 8"], "next_event_ids": []},
+      {"choice_text": "狡辩说这不是你的笔记本", "outcome_text": "笔迹鉴定结果明确无误。你失去了信任度，成为班级话题中心。", "effects": ["-Happiness 20", "-Charm 5"], "next_event_ids": []}
+    ],
+    "death_risk": 0,
+    "notes": "MEME事件，青春期的黑色幽默养成记"
+  },
+  {
+    "id": "A03",
+    "title": "被发现是数学天才",
+    "rarity": "EPIC",
+    "age_range": [0, 12],
+    "route_tags": ["universal"],
+    "base_weight": 3,
+    "requirements": "",
+    "intro": "一次数学竞赛中，你用不寻常的解法轻松解决了所有难题。阅卷老师当场惊呆了，认为这是天才级的思维能力。学校领导亲自找你谈话，邀请你参加国家级数学竞赛。你的人生轨迹从这一刻开始改变。",
+    "choices": [
+      {"choice_text": "欣然接受，开始专业培训", "outcome_text": "你进入了精英数学班。虽然压力很大，但你发现了自己的热情所在。一个新世界为你打开。", "effects": ["+Skill 20"], "next_event_ids": ["B01"]},
+      {"choice_text": "谢绝邀请，想保持正常的童年生活", "outcome_text": "你选择了快乐，但也错过了可能改变人生的机遇。有时候平凡也是一种幸福。", "effects": ["+Happiness 5"], "next_event_ids": []}
+    ],
+    "death_risk": 0,
+    "notes": "天赋启蒙，数学奇才的开始"
+  },
+  {
+    "id": "A04",
+    "title": "父母离婚",
+    "rarity": "RARE",
+    "age_range": [0, 12],
+    "route_tags": ["universal"],
+    "base_weight": 5,
+    "requirements": "",
+    "intro": "爸爸妈妈终于决定了。他们在你面前签署了文件，声音很温柔，但眼睛都是红的。这件事在你的童年日记中写下了分界线。从此，周末需要选择去谁家，圣诞礼物也要分两份。",
+    "choices": [
+      {"choice_text": "努力成为家庭和平使者，频繁往返两个家", "outcome_text": "你累得筋疲力尽，但父母都因为你而努力改善生活质量。心理医生说这叫角色颠倒。", "effects": ["-Happiness 30", "+Charm 5"], "next_event_ids": []},
+      {"choice_text": "选择跟其中一个父母生活，保护自己的心理空间", "outcome_text": "你获得了平静，但心里始终有一种被选择和被遗弃的复杂感受。人生就是学会接纳不完美。", "effects": ["-Happiness 30", "+Risk 10"], "next_event_ids": []}
+    ],
+    "death_risk": 0,
+    "notes": "人生变故，成长的代价"
+  },
+  {
+    "id": "A05",
+    "title": "幼时奇遇：路边捡到迷路的外国科学家",
+    "rarity": "LEGENDARY",
+    "age_range": [0, 12],
+    "route_tags": ["universal"],
+    "base_weight": 1,
+    "requirements": "",
+    "intro": "一个雨夜，你在路边捡到了一位衣衫褴褛、口音奇特的外国老人。他说自己是某个国际学术组织的研究员，迷路了。出于善心，你带他去了警察局。他感激涕零，决定留在这座城市，成为你的终身导师。这是你人生中最棒的SSR开局。",
+    "choices": [
+      {"choice_text": "每天跟着导师学习各种科学知识和人文思想", "outcome_text": "导师教会你看待世界的全新角度。你获得了同龄人难以想象的知识储备和国际视野。人生赢家。", "effects": ["+Skill 15", "+Charm 10", "mentor=true"], "next_event_ids": ["C01"]},
+      {"choice_text": "把这个际遇告诉同学，引起轰动", "outcome_text": "你成了班级名人，导师也成了学校的传奇人物。但你失去了独享这段奇遇的特殊感。", "effects": ["+Skill 8", "+Charm 15"], "next_event_ids": []}
+    ],
+    "death_risk": 0,
+    "notes": "开局SSR，命运之轮选中你"
+  }
+]

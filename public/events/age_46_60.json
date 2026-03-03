@@ -1,0 +1,102 @@
+[
+  {
+    "id": "E01",
+    "title": "被{MEGA_FUND}做空，公司市值3天蒸发90%，从百亿富翁变负资产",
+    "rarity": "LEGENDARY",
+    "age_range": [46, 60],
+    "route_tags": ["startup"],
+    "base_weight": 10,
+    "requirements": "Money>=1000",
+    "intro": "三天前还是风光无限的百亿富翁，却在一纸做空报告中跌下神坛。国际对冲基金MEGA_FUND的精准狙击，让你的帝国在市场恐慌中瞬间崩塌。股价从高位跳水，市值蒸发九成，曾经的荣光已成过往云烟。现在你面临的不仅是财富清零，还有源源不断的债务和失去一切后的人生抉择。",
+    "choices": [
+      {
+        "choice_text": "与律师团队对抗到底，起诉做空机构",
+        "outcome_text": "漫长的诉讼战消耗了你的最后积蓄，最终以和解收场。你失去了财富，却守住了尊严。",
+        "effects": ["-Money 500", "+Reputation 10"],
+        "next_event_ids": []
+      }
+    ],
+    "death_risk": 0,
+    "notes": "财富归零截图"
+  },
+  {
+    "id": "E02",
+    "title": "出版回忆录《我在硅谷被割韭菜的那些年》，意外成畅销书，版税500万",
+    "rarity": "EPIC",
+    "age_range": [46, 60],
+    "route_tags": ["startup", "office"],
+    "base_weight": 10,
+    "requirements": "Reputation>=30",
+    "intro": "几年的失败和挫折被你化成文字，原本只是想记录那些痛苦的时刻，却没想到这部诚实的自传能够触动千万读者的心弦。从被割韭菜的受害者变成畅销作家，你用真实的故事重新定义了自己。500万的版税不仅恢复了你的经济状况，更让你获得了精神上的救赎和新的人生意义。",
+    "choices": [
+      {
+        "choice_text": "继续出书，成为职业作家",
+        "outcome_text": "你的笔触越来越有力，声音越来越响亮，成为了一代人的精神导师。",
+        "effects": ["+Money 300", "+Reputation 40", "+Happiness 30"],
+        "next_event_ids": []
+      }
+    ],
+    "death_risk": 0,
+    "notes": "失败者逆袭"
+  },
+  {
+    "id": "E03",
+    "title": "获诺贝尔奖级别学术荣誉，站在斯德哥尔摩领奖台",
+    "rarity": "LEGENDARY",
+    "age_range": [46, 60],
+    "route_tags": ["scholar"],
+    "base_weight": 10,
+    "requirements": "Reputation>=90 AND Impact>=80",
+    "intro": "瑞典皇家科学院的邀请函终于来到你的手中。几十年的研究和坚持，终于在这个全球最高的学术舞台得到了认可。站在斯德哥尔摩音乐厅的领奖台上，当国王亲手颁给你那枚金质奖章的时刻，你的人生迎来了最闪耀的巅峰。这不仅是荣誉，更是对一生学术追求的终极诠释。",
+    "choices": [
+      {
+        "choice_text": "感谢所有支持过你的人，继续学术研究",
+        "outcome_text": "这个荣誉激励着你继续深耕学术领域，为人类知识的进步贡献最后的光热。",
+        "effects": ["+Reputation 60", "+Impact 50", "+Happiness 50", "+Money 500"],
+        "next_event_ids": []
+      }
+    ],
+    "death_risk": 0,
+    "notes": "学者人生巅峰"
+  },
+  {
+    "id": "E04",
+    "title": "50岁大叔买了辆保时捷被儿子发朋友圈嘲讽，意外成网络梗图",
+    "rarity": "MEME",
+    "age_range": [46, 60],
+    "route_tags": ["universal"],
+    "base_weight": 10,
+    "requirements": "Money>=300",
+    "intro": "中年危机的教科书写照。你花300万买了一辆红色保时捷，想要重拾青春的感觉。但是你的儿子发到朋友圈的一张照片：年迈的你倚靠在跑车旁，配文\"我爸以为自己还是二十岁\"，瞬间点燃了社交媒体。表情包刷屏，段子手云集，你从富人变成了网红，但这不是你想要的那种红。",
+    "choices": [
+      {
+        "choice_text": "破罐子破摔，和儿子互怼，进一步成为网络明星",
+        "outcome_text": "与儿子的互动段子越来越有趣，你意外获得了大量粉丝，成为了反讽中年危机的文化符号。",
+        "effects": ["-Happiness 5", "+Reputation 20"],
+        "next_event_ids": []
+      }
+    ],
+    "death_risk": 0,
+    "notes": "中年危机教科书"
+  },
+  {
+    "id": "E05",
+    "title": "心脏病突发，手术后重获新生，决定放弃一切移居海南",
+    "rarity": "EPIC",
+    "age_range": [46, 60],
+    "route_tags": ["universal"],
+    "base_weight": 10,
+    "requirements": "Stress>=80 OR Health<=30",
+    "intro": "办公室里的一阵刺痛，让你瞬间跌倒在地。急救车、手术台、重症监护室——生死的边界在那一刻变得极其清晰。经历了三次搭桥手术和三个月的康复，你终于活了过来。但那颗曾经为事业疯狂跳动的心脏已经给你下了最后通牒。你决定放下一切，租一间面朝大海的别墅，在海南找到生命的另一种意义。",
+    "choices": [
+      {
+        "choice_text": "彻底断舍离，每天冥想和瑜伽",
+        "outcome_text": "海南的阳光、海风和慢生活，让你重新发现了活着的真谛。家人陆续加入，你成为了亲友眼中的人生智者。",
+        "effects": ["-Health 10", "+Happiness 50", "-Money 80", "-Stress 60"],
+        "next_event_ids": []
+      }
+    ],
+    "death_risk": 0.1,
+    "notes": "人生警醒时刻"
+  }
+]
